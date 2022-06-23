@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOS Ecosystem</title>
+    <meta name="theme-color" content="var(--accent-color)">
+
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon shortcut" type="image/png" href="favicon.png">
+
+    <!-- Building Blocks -->
+    <link rel="stylesheet" type="text/css" href="shared/elements/gaia-theme/gaia-theme.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/layout.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/switches.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/input_areas.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/headers.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/buttons.css">
+    <link rel="stylesheet" type="text/css" href="style/body.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/warnings.css">
+    <link rel="stylesheet" type="text/css" href="style/banner.css">
+    <link rel="stylesheet" type="text/css" href="style/footer.css">
+    <link rel="stylesheet" type="text/css" href="style/menu.css">
+    <link rel="stylesheet" type="text/css" href="style/cursors/cursors.css">
+
+    <!-- Localization -->
+    <meta name="defaultLanguage" content="en-US">
+    <meta name="availableLanguages" content="ar, en-US">
+    <link rel="localization" href="locales/website.{locale}.properties">
+    <link rel="localization" href="locales/home.{locale}.properties">
+
+    <!-- Firefox Desktop shims -->
+    <script type="text/javascript" defer src="shared/js/l10n.js"></script>
+
+    <!-- Web Components -->
+    <script defer type="text/javascript" src="js/main.js"></script>
+    <script defer type="text/javascript" src="js/themes.js"></script>
+    <script defer type="text/javascript" src="js/dpad_navigation.js"></script>
+    <script defer type="text/javascript" src="js/header.js"></script>
+    <script defer type="text/javascript" src="js/language.js"></script>
+    <script defer type="text/javascript" src="js/overscroll.js"></script>
+    <script defer type="module" src="js/firebase.js"></script>
+  </head>
+    <section role="region" id="root" class="vbox fit">
+      <header>
+        <form>
+          <p>
+            <input type="text" class="searchbox" data-l10n-id="searchbox">
+            <button type="reset"></button>
+          </p>
+        </form>
+        <a href="/" class="home-link">OS</a>
+        <menu type="toolbar">
+          <a href="?p=download" class="pc-only" data-l10n-id="download">WOS</a>
+          <a href="/store/" class="pc-only" data-l10n-id="store">Store</a>
+          <a href="?p=products" class="pc-only" data-l10n-id="products">Products</a>
+          <a href="#footer" data-l10n-id="contact-us">Contact Us</a>
+          <a href="/login.html" data-l10n-id="login" id="login-button" title="Not Available">Login</a>
+          <a href="?p=account" id="profile-picture"></a>
+          <a href="#menu">
+            <span class="icon icon-menu"></span>
+          </a>
+        </menu>
+      </header>
+      <section class="fit scroll">
+        <div class="safezone">
+          <div class="warning exclamation">
+            <p data-l10n-id="wip-note"></p>
+            <a href="#" onclick="this.parentElement.classList.add('hidden');" data-l10n-id="ok"></a>
+          </div>
+        </div>
+        <div id="frame"></div>
+        <footer id="footer" class="links-footer">
+          <div class="safezone">
+            <div class="container">
+              <ul>
+                <header data-l10n-id="contact-us">Contact Us</header>
+                <li><a href="https://discord.gg/QZvZFUgVhh" data-l10n-id="discord">Discord</a></li>
+                <li><a href="https://www.twitter.com/@Killer0Mortada" data-l10n-id="twitter">Twitter</a></li>
+                <li><a href="mailto:mortcodesweb@gmail.com" data-l10n-id="gmail">Gmail</a></li>
+              </ul>
+              <ul>
+                <header data-l10n-id="products">Products</header>
+                <li><a href="/weather/" data-l10n-id="weather">Weather</a></li>
+                <li><a href="/newspaper/" data-l10n-id="newspaper">Newspaper</a></li>
+                <li><a href="/store/" data-l10n-id="store">Store</a></li>
+                <li><a href="/search/" data-l10n-id="search">Search</a></li>
+                <li><a href="/maps/" data-l10n-id="maps">Maps</a></li>
+              </ul>
+              <ul>
+                <header data-l10n-id="developer">Developer</header>
+                <li><a href="https://developer.mozilla.com/" data-l10n-id="mdn">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/" data-l10n-id="w3schools">W3Schools</a></li>
+              </ul>
+              <ul>
+                <header data-l10n-id="other">Other</header>
+                <li><a href="/credits.html" data-l10n-id="credits" target="_blank">Credits</a></li>
+                <li>
+                  <label class="pack-switch">
+                    <input type="checkbox" id="dark-mode">
+                    <span data-l10n-id="dark-mode">Dark Mode</span>
+                  </label>
+                </li>
+                <li>
+                  <p data-l10n-id="theme">Theme</p>
+                  <select id="theme">
+                    <option value="" data-l10n-id="theme-default">Default</option>
+                    <option value="skin-dark" data-l10n-id="theme-magenta">Magenta</option>
+                    <option value="skin-comms" data-l10n-id="theme-green">Green</option>
+                    <option value="skin-organic" data-l10n-id="theme-organic">Organic</option>
+                  </select>
+                </li>
+                <li>
+                  <p data-l10n-id="language">Language</p>
+                  <select id="languages">
+                    <option value="ar">العربية</option>
+                    <option value="en-US">English (US)</option>
+                  </select>
+                </li>
+              </ul>
+            </div>
+            <div class="info">
+              <p data-l10n-id="footer-title">MortCodesWeb <3 Web</p>
+              <p data-l10n-id="footer-info">Everything is created and designed by MortCodesWeb (Excluding B2G and Gaia)</p>
+              <p data-l10n-id="footer-info-code">Gaia and B2G i use are created by <a href="https://www.mozilla.org/">Mozilla</a></p>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </section>
+
+    <div id="menu" class="gaia-list fit scroll sticky">
+      <header data-l10n-id="personal">Personal</header>
+      <ul>
+        <li class="active hbox">
+          <label class="hbox fit">
+            <span class="fit" data-l10n-id="accent-color">Accent Color</span>
+            <input type="color" id="accent-color">
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div id="screen-reader-hint">
+      <p>Press R to Enable Screen Reader</p>
+    </div>
+  </body>
+</html>

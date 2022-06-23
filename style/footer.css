@@ -1,0 +1,231 @@
+/*
+ * Footer
+ */
+.links-footer {
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background: var(--background);
+  overflow: hidden;
+  opacity: 0;
+  animation: footer 0.5s cubic-bezier(0.2, 0.9, 0.1, 1.0) forwards 0.25s;
+}
+
+@keyframes footer {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.links-footer .container {
+  display: block;
+  overflow: hidden;
+  border-bottom: solid 0.1rem rgba(127,127,127,0.5);
+  padding-bottom: 1.5rem;
+}
+
+.links-footer ul {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.links-footer ul:last-of-type {
+  margin-bottom: 0;
+}
+
+.links-footer ul header {
+  width: 100%;
+  height: 4rem;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: 1.6rem;
+}
+
+.skin-dark .links-footer ul header {
+  color: #c040a0;
+}
+
+.skin-comms .links-footer ul header {
+  color: #40a060;
+}
+
+.links-footer ul li {
+  width: 100%;
+  min-height: 4rem;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  transition: background-color 0.2s;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  color: #858585;
+}
+
+.links-footer ul li:hover {
+  background-color: var(--translucent);
+  transition: none;
+}
+
+.links-footer ul li:active {
+  background-color: var(--translucent-plus);
+  transition: none;
+}
+
+.links-footer ul li[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.links-footer ul li > a {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  text-decoration: none;
+  box-sizing: border-box;
+  line-height: 4rem;
+  border-bottom: solid 0.1rem rgba(0,0,0,0.0625);
+  box-sizing: border-box;
+  height: 4rem;
+}
+html[dir="ltr"] .links-footer ul li > a {
+  background: url(images/right.svg) no-repeat right center / 2rem;
+}
+html[dir="rtl"] .links-footer ul li > a {
+  background: url(images/left.svg) no-repeat left center / 2rem;
+}
+
+.links-footer ul li > a:hover {
+  text-decoration: underline;
+}
+
+.links-footer ul li > label {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  line-height: 4rem;
+  height: 4rem;
+  width: 100%;
+  border-bottom: solid 0.1rem rgba(0,0,0,0.125);
+  box-sizing: border-box;
+  -moz-padding-start: 1rem;
+}
+
+.links-footer ul li:hover > a,
+.links-footer ul li:active > a,
+.links-footer ul li:last-child > a,
+.links-footer ul li:hover > label,
+.links-footer ul li:active > label,
+.links-footer ul li:last-child > label {
+  border-bottom: none;
+}
+
+.links-footer ul li button:not(:hover, :active),
+.links-footer ul li select {
+  background-color: var(--background-plus);
+}
+
+.links-footer .info {
+  color: #858585;
+  font-size: 1.6rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.links-footer .info p {
+  color: #858585;
+  overflow: hidden;
+  width: 100%;
+  margin: 1rem 0 0;
+}
+
+.links-footer .info p:first-child {
+  margin: 2rem 0 0;
+  color: var(--text-color);
+}
+
+.links-footer .info p a {
+  color: var(--accent-color);
+}
+
+.connected-brands {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 1rem;
+}
+
+.connected-brands img {
+  width: 7.2rem;
+  height: 7.2rem;
+  margin: 0 1rem;
+  pointer-events: none;
+  border-radius: 50%;
+  background: #000;
+}
+
+@media screen and (min-width: 600px) and (max-width: 864px) {
+  /*
+   * Footer
+   */
+  .links-footer ul {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+  html[dir="ltr"] .links-footer ul {
+    float: left;
+  }
+  html[dir="rtl"] .links-footer ul {
+    float: right;
+  }
+
+  .links-footer ul:nth-last-of-type(-n+2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 864px) and (max-width: 1024px) {
+  /*
+   * Footer
+   */
+  .links-footer ul {
+    width: 33.3%;
+    margin-bottom: 1rem;
+  }
+  html[dir="ltr"] .links-footer ul {
+    float: left;
+  }
+  html[dir="rtl"] .links-footer ul {
+    float: right;
+  }
+
+  .links-footer ul:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /*
+   * Footer
+   */
+  .links-footer ul {
+    width: 25%;
+    margin-bottom: 0;
+  }
+  html[dir="ltr"] .links-footer ul {
+    float: left;
+  }
+  html[dir="rtl"] .links-footer ul {
+    float: right;
+  }
+}

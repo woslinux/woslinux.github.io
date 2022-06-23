@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "WOS Overscroll",
+  "version": "1.0",
+  "description": "MortCodesWeb's WOS Overscroll made for Mozilla Firefox",
+  "icons": {
+    "16": "icons/overscroll.png",
+    "24": "icons/overscroll@1.5x.png",
+    "32": "icons/overscroll@2x.png",
+    "36": "icons/overscroll@2.25x.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["overscroll.js"]
+    }
+  ]
+}

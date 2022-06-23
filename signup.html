@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Building Blocks -->
+    <link rel="stylesheet" type="text/css" href="shared/elements/gaia-theme/gaia-theme.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/layout.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/confirm.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/input_areas.css">
+    <link rel="stylesheet" type="text/css" href="style/body.css">
+    <link rel="stylesheet" type="text/css" href="style/login.css">
+    <link rel="stylesheet" type="text/css" href="style/warnings.css">
+
+    <!-- Localization -->
+    <meta name="defaultLanguage" content="en-US">
+    <meta name="availableLanguages" content="ar, en-US">
+    <link rel="localization" href="locales/website.{locale}.properties">
+
+    <!-- Firefox Desktop shims -->
+    <script type="text/javascript" defer src="shared/js/l10n.js"></script>
+
+    <!-- Web Components -->
+    <script defer type="module" src="js/language.js"></script>
+    <script defer type="module" src="js/firebase.js"></script>
+    <script defer type="text/javascript" src="js/signup.js"></script>
+  </head>
+  <body class="gaia-list">
+    <form role="dialog" data-type="confirm" class="login-dialog">
+      <section>
+        <h1 data-l10n-id="signUp">Sign-up</h1>
+        <div class="warning error" id="error">
+          <p data-l10n-id="signUp-fail">Failed to create a account</p>
+          <a href="#" onclick="this.parentElement.classList.add('hidden');" data-l10n-id="ok"></a>
+        </div>
+        <p>
+          <label>
+            <span data-l10n-id="username">Username</span>
+            <input type="text" id="username" required data-l10n-id="signUp-username">
+          </label>
+          <label>
+            <span data-l10n-id="email">Email</span>
+            <input type="email" id="email" required data-l10n-id="signUp-email">
+          </label>
+          <label>
+            <span data-l10n-id="password">Password</span>
+            <input type="password" id="password" required data-l10n-id="login-password">
+          </label>
+          <label>
+            <span data-l10n-id="passwordConfirm">Confirm Password</span>
+            <input type="password" id="password-confirm" required data-l10n-id="login-password">
+          </label>
+          <a href="/login.html" data-l10n-id="signUp-accountExists">Already have a account?</a>
+        </p>
+      </section>
+      <menu>
+        <button id="cancel-button" data-l10n-id="cancel">Cancel</button>
+        <button class="recommend" id="submit-button" data-l10n-id="signUp">Sign-up</button>
+      </menu>
+    </form>
+  </body>
+</html>

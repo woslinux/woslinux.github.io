@@ -1,0 +1,40 @@
+{
+  "name": "Newspaper",
+  "description": "Gaia Newspaper",
+  "type": "certified",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "MortCodesWeb",
+    "url": "https://github.com/mortada-killer0/"
+  },
+  "locales": {
+    "ar": {
+      "name": "الأخبار",
+      "description": "أخبار Gaia"
+    },
+    "en-US": {
+      "name": "Newspaper",
+      "description": "Gaia Newspaper"
+    },
+    "fr": {
+      "name": "Newspaper",
+      "description": "Gaia Newspaper"
+    },
+    "zh-TW": {
+      "name": "Newspaper",
+      "description": "Gaia Newspaper"
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "16": "/style/icons/newspaper_16.png",
+    "32": "/style/icons/newspaper_32.png",
+    "48": "/style/icons/newspaper_48.png",
+    "64": "/style/icons/newspaper_64.png",
+    "128": "/style/icons/newspaper_128.png",
+    "256": "/style/icons/newspaper_256.png"
+  },
+  "permissions": {
+    "themeable": {}
+  }
+}

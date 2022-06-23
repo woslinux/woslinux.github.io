@@ -1,0 +1,25 @@
+{
+  "short_name": "Made by MCW",
+  "name": "Made by MortCodesWeb",
+  "description": "MortCodesWeb's Home Webapp",
+  "start_url": "/index.html",
+  "background_color": "#e0e2e5",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#0061e0",
+  "icons": [],
+  "shortcuts": [
+    {
+      "name": "Weather",
+      "short_name": "Weather",
+      "description": "Opens weather",
+      "url": "/weather/index.html#weather",
+      "icons": [
+        {
+          "src": "/weather/style/images/home.svg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

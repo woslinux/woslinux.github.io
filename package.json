@@ -1,0 +1,18 @@
+{
+  "name": "woslinux.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github/woslinux/woslinux.github.io"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "mortcodesweb",
+  "license": "Apache-2.0"
+}

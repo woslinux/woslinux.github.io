@@ -1,0 +1,2182 @@
+{
+	"version": 3,
+	"generated_at": 0,
+	"categories": {
+		"communication": {
+			"name": "Communication",
+			"description": "Apps that allow you to communicate with other people."
+		},
+		"education": {
+			"name": "Education",
+			"description": "Apps that provide access to Education sources."
+		},
+		"games": {
+			"name": "Games",
+			"description": "Test your finger speed."
+		},
+		"health": {
+			"name": "Health",
+			"description": "Health related utilities"
+		},
+		"multimedia": {
+			"name": "Multimedia",
+			"description": "Apps to help with entertainment"
+		},
+		"news": {
+			"name": "News",
+			"description": "Apps that provide access to news sources."
+		},
+		"search": {
+			"name": "Search",
+			"description": "Apps to search what you want"
+		},
+		"social": {
+			"name": "Social",
+			"description": "Apps that lets you meet your internet friends."
+		},
+		"travel": {
+			"name": "Travel",
+			"description": "Useful tools for traveling"
+		},
+		"utility": {
+			"name": "Utility",
+			"description": "Utilities to help with daily functions."
+		}
+	},
+	"apps": [
+		{
+			"name": "Google",
+			"description": "(This is a Test Webapp. It's not Official)",
+			"icon": "/store/database/webapps/google/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/google/application.zip",
+				"manifest": "/store/database/webapps/google/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Google LLC"
+			],
+			"maintainer": [
+				"Google LLC"
+			],
+			"has_ads": true,
+			"has_tracking": true,
+			"meta": {
+				"tags": "google; search",
+				"categories": [
+					"search"
+				]
+			},
+			"slug": "google",
+			"screenshots": [
+				"/store/database/webapps/google/screenshots/0000.png",
+				"/store/database/webapps/google/screenshots/0001.png"
+			]
+		},
+		{
+			"name": "First Test",
+			"description": "A test add-on that doesn't actually do anything",
+			"icon": "/store/database/webapps/addon1/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/addon1/application.zip",
+				"manifest": "/store/database/webapps/addon1/manifest.webapp"
+			},
+			"type": "addon",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "addon1; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "addon1",
+			"screenshots": []
+		},
+		{
+			"name": "Second Test",
+			"description": "Another test add-on that doesn't actually do anything",
+			"icon": "/store/database/webapps/addon2/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/addon2/application.zip",
+				"manifest": "/store/database/webapps/addon2/manifest.webapp"
+			},
+			"type": "addon",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "addon2; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "addon2",
+			"screenshots": []
+		},
+		{
+			"name": "Obsolete add-on",
+			"description": "Test add-on that has an obsolete format and doesn't actually do anything",
+			"icon": "/store/database/webapps/addon3/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/addon3/application.zip",
+				"manifest": "/store/database/webapps/addon3/manifest.webapp"
+			},
+			"type": "addon",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "addon3; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "addon3",
+			"screenshots": []
+		},
+		{
+			"name": "Bluetooth Manager",
+			"description": "Gaia Bluetooth Manager",
+			"icon": "/store/database/webapps/bluetooth/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/bluetooth/application.zip",
+				"manifest": "/store/database/webapps/bluetooth/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "bluetooth; utility",
+				"categories": [
+					"utility"
+				]
+			},
+			"slug": "bluetooth",
+			"screenshots": []
+		},
+		{
+			"name": "Bookmark",
+			"description": "Bookmark Manager",
+			"icon": "/store/database/webapps/bookmark/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/bookmark/application.zip",
+				"manifest": "/store/database/webapps/bookmark/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "bookmark; utility",
+				"categories": [
+					"utility"
+				]
+			},
+			"slug": "bookmark",
+			"screenshots": []
+		},
+		{
+			"name": "BuddyUp",
+			"description": "",
+			"icon": "/store/database/webapps/buddyup/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/buddyup/application.zip",
+				"manifest": "/store/database/webapps/buddyup/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Mozilla"
+			],
+			"maintainer": [
+				"Mozilla"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "buddyup; social",
+				"categories": [
+					"social"
+				]
+			},
+			"slug": "buddyup",
+			"screenshots": []
+		},
+		{
+			"name": "Bugzilla Lite",
+			"description": "Mobile app for Bugzilla",
+			"icon": "/store/database/webapps/bugzillalite/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/bugzillalite/application.zip",
+				"manifest": "/store/database/webapps/bugzillalite/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "bugzillalite; utility",
+				"categories": [
+					"utility"
+				]
+			},
+			"slug": "bugzillalite",
+			"screenshots": []
+		},
+		{
+			"name": "Calculator",
+			"description": "",
+			"icon": "/store/database/webapps/calculator/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/calculator/application.zip",
+				"manifest": "/store/database/webapps/calculator/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "calculator; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "calculator",
+			"screenshots": []
+		},
+		{
+			"name": "Calendar",
+			"description": "Gaia Calendar",
+			"icon": "/store/database/webapps/calendar/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/calendar/application.zip",
+				"manifest": "/store/database/webapps/calendar/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "calendar; utility; travel",
+				"categories": [
+					"travel"
+				]
+			},
+			"slug": "calendar",
+			"screenshots": []
+		},
+		{
+			"name": "Camera",
+			"description": "Gaia Camera",
+			"icon": "/store/database/webapps/camera/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/camera/application.zip",
+				"manifest": "/store/database/webapps/camera/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "camera; utility; travel",
+				"categories": [
+					"travel"
+				]
+			},
+			"slug": "camera",
+			"screenshots": []
+		},
+		{
+			"name": "Clock",
+			"description": "Gaia Clock",
+			"icon": "/store/database/webapps/clock/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/clock/application.zip",
+				"manifest": "/store/database/webapps/clock/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "clock; utility",
+				"categories": [
+					"utility"
+				]
+			},
+			"slug": "clock",
+			"screenshots": []
+		},
+		{
+			"name": "Communications",
+			"description": "Gaia Communications",
+			"icon": "/store/database/webapps/communications/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/communications/application.zip",
+				"manifest": "/store/database/webapps/communications/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "communications; communication",
+				"categories": [
+					"communication"
+				]
+			},
+			"slug": "communications",
+			"screenshots": []
+		},
+		{
+			"name": "Google Contacts DS",
+			"description": "",
+			"icon": "/store/database/webapps/contacts-ds-provider1/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/contacts-ds-provider1/application.zip",
+				"manifest": "/store/database/webapps/contacts-ds-provider1/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Anonymous"
+			],
+			"maintainer": [
+				"Anonymous"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "contacts-ds-provider1; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "contacts-ds-provider1",
+			"screenshots": []
+		},
+		{
+			"name": "LI Contacts DS",
+			"description": "",
+			"icon": "/store/database/webapps/contacts-ds-provider2/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/contacts-ds-provider2/application.zip",
+				"manifest": "/store/database/webapps/contacts-ds-provider2/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Anonymous"
+			],
+			"maintainer": [
+				"Anonymous"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "contacts-ds-provider2; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "contacts-ds-provider2",
+			"screenshots": []
+		},
+		{
+			"name": "ContactsManager",
+			"description": "Contacts Provider App",
+			"icon": "/store/database/webapps/contacts-manager/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/contacts-manager/application.zip",
+				"manifest": "/store/database/webapps/contacts-manager/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"Gaia Team"
+			],
+			"maintainer": [
+				"Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "contacts-manager; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "contacts-manager",
+			"screenshots": []
+		},
+		{
+			"name": "Usage",
+			"description": "Usage application to see credit and data usage statistics",
+			"icon": "/store/database/webapps/costcontrol/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/costcontrol/application.zip",
+				"manifest": "/store/database/webapps/costcontrol/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "costcontrol; news",
+				"categories": [
+					"news"
+				]
+			},
+			"slug": "costcontrol",
+			"screenshots": []
+		},
+		{
+			"name": "Default Theme",
+			"description": "Default Theme.",
+			"icon": "/store/database/webapps/default_theme/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/default_theme/application.zip",
+				"manifest": "/store/database/webapps/default_theme/manifest.webapp"
+			},
+			"type": "theme",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "default_theme; system",
+				"categories": [
+					"system"
+				]
+			},
+			"slug": "default_theme",
+			"screenshots": []
+		},
+		{
+			"name": "Downloads",
+			"description": "Gaia Download Picker",
+			"icon": "/store/database/webapps/download/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/download/application.zip",
+				"manifest": "/store/database/webapps/download/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "download; system",
+				"categories": [
+					"system"
+				]
+			},
+			"slug": "download",
+			"screenshots": []
+		},
+		{
+			"name": "Device Storage Test",
+			"description": "Test app for Device Storage",
+			"icon": "/store/database/webapps/ds-test/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/ds-test/application.zip",
+				"manifest": "/store/database/webapps/ds-test/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"dhylands"
+			],
+			"maintainer": [
+				"dhylands"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "ds-test; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "ds-test",
+			"screenshots": []
+		},
+		{
+			"name": "E-Mail",
+			"description": "Gaia E-Mail",
+			"icon": "/store/database/webapps/email/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/email/application.zip",
+				"manifest": "/store/database/webapps/email/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "email; communication",
+				"categories": [
+					"communication"
+				]
+			},
+			"slug": "email",
+			"screenshots": []
+		},
+		{
+			"name": "EmergencyCall",
+			"description": "The emergency call pad",
+			"icon": "/store/database/webapps/emergency-call/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/emergency-call/application.zip",
+				"manifest": "/store/database/webapps/emergency-call/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "emergency-call; system",
+				"categories": [
+					"system"
+				]
+			},
+			"slug": "emergency-call",
+			"screenshots": []
+		},
+		{
+			"name": "Facebook",
+			"description": "Facebook helps you connect and share with the people in your life.",
+			"icon": "/store/database/webapps/facebook/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/facebook/application.zip",
+				"manifest": "/store/database/webapps/facebook/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Facebook"
+			],
+			"maintainer": [
+				"Facebook"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "facebook; social; communication",
+				"categories": [
+					"social"
+				]
+			},
+			"slug": "facebook",
+			"screenshots": []
+		},
+		{
+			"name": "Find My Device",
+			"description": "Find My Device helps find, lock and erase a lost phone",
+			"icon": "/store/database/webapps/findmydevice/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/findmydevice/application.zip",
+				"manifest": "/store/database/webapps/findmydevice/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "findmydevice; travel",
+				"categories": [
+					"travel"
+				]
+			},
+			"slug": "findmydevice",
+			"screenshots": []
+		},
+		{
+			"name": "Purchased Media",
+			"description": "Download and manage forward locked music, ringtones and wallpaper",
+			"icon": "/store/database/webapps/fl/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/fl/application.zip",
+				"manifest": "/store/database/webapps/fl/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "fl; multimedia",
+				"categories": [
+					"multimedia"
+				]
+			},
+			"slug": "fl",
+			"screenshots": []
+		},
+		{
+			"name": "FM Radio",
+			"description": "Gaia FM Radio",
+			"icon": "/store/database/webapps/fm/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/fm/application.zip",
+				"manifest": "/store/database/webapps/fm/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "fm; multimedia",
+				"categories": [
+					"multimedia"
+				]
+			},
+			"slug": "fm",
+			"screenshots": []
+		},
+		{
+			"name": "FTU",
+			"description": "First Time Experience",
+			"icon": "/store/database/webapps/ftu/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/ftu/application.zip",
+				"manifest": "/store/database/webapps/ftu/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "ftu; system",
+				"categories": [
+					"system"
+				]
+			},
+			"slug": "ftu",
+			"screenshots": []
+		},
+		{
+			"name": "Gallery",
+			"description": "Gaia Gallery",
+			"icon": "/store/database/webapps/gallery/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/gallery/application.zip",
+				"manifest": "/store/database/webapps/gallery/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "gallery; multimedia",
+				"categories": [
+					"multimedia"
+				]
+			},
+			"slug": "gallery",
+			"screenshots": []
+		},
+		{
+			"name": "Geoloc",
+			"description": "Geolocation Tracker",
+			"icon": "/store/database/webapps/geoloc/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/geoloc/application.zip",
+				"manifest": "/store/database/webapps/geoloc/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"lissyx"
+			],
+			"maintainer": [
+				"lissyx"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "geoloc; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "geoloc",
+			"screenshots": []
+		},
+		{
+			"name": "Default Home Screen",
+			"description": "Gaia home screen.",
+			"icon": "/store/database/webapps/homescreen/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/homescreen/application.zip",
+				"manifest": "/store/database/webapps/homescreen/manifest.webapp"
+			},
+			"type": "homescreen",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "homescreen; system",
+				"categories": [
+					"system"
+				]
+			},
+			"slug": "homescreen",
+			"screenshots": []
+		},
+		{
+			"name": "In-app Payment Tester",
+			"description": "Utility app to test in-app payments.",
+			"icon": "/store/database/webapps/in_app_pay_test/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/in_app_pay_test/application.zip",
+				"manifest": "/store/database/webapps/in_app_pay_test/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "in_app_pay_test; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "in_app_pay_test",
+			"screenshots": []
+		},
+		{
+			"name": "Built-in Keyboard",
+			"description": "Built-in Keyboard",
+			"icon": "/store/database/webapps/keyboard/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/keyboard/application.zip",
+				"manifest": "/store/database/webapps/keyboard/manifest.webapp"
+			},
+			"type": "input",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "keyboard; system",
+				"categories": [
+					"system"
+				]
+			},
+			"slug": "keyboard",
+			"screenshots": []
+		},
+		{
+			"name": "L20n Example App",
+			"description": "Example app using l20n file format",
+			"icon": "/store/database/webapps/l20n-app/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/l20n-app/application.zip",
+				"manifest": "/store/database/webapps/l20n-app/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "l20n-app; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "l20n-app",
+			"screenshots": []
+		},
+		{
+			"name": "Dev",
+			"description": "Firefox Marketplace Dev",
+			"icon": "/store/database/webapps/marketplace-dev.allizom.org/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/marketplace-dev.allizom.org/application.zip",
+				"manifest": "/store/database/webapps/marketplace-dev.allizom.org/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Mozilla"
+			],
+			"maintainer": [
+				"Mozilla"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "marketplace-dev.allizom.org; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "marketplace-dev.allizom.org",
+			"screenshots": []
+		},
+		{
+			"name": "Stage",
+			"description": "Firefox Marketplace Stage",
+			"icon": "/store/database/webapps/marketplace.allizom.org/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/marketplace.allizom.org/application.zip",
+				"manifest": "/store/database/webapps/marketplace.allizom.org/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Mozilla"
+			],
+			"maintainer": [
+				"Mozilla"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "marketplace.allizom.org; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "marketplace.allizom.org",
+			"screenshots": []
+		},
+		{
+			"name": "Marketplace",
+			"description": "Firefox Marketplace",
+			"icon": "/store/database/webapps/marketplace.firefox.com/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/marketplace.firefox.com/application.zip",
+				"manifest": "/store/database/webapps/marketplace.firefox.com/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Mozilla"
+			],
+			"maintainer": [
+				"Mozilla"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "marketplace.firefox.com; search; utility; multimedia",
+				"categories": [
+					"search"
+				]
+			},
+			"slug": "marketplace.firefox.com",
+			"screenshots": []
+		},
+		{
+			"name": "Membuster",
+			"description": "Busts your memory",
+			"icon": "/store/database/webapps/membuster/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/membuster/application.zip",
+				"manifest": "/store/database/webapps/membuster/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "membuster; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "membuster",
+			"screenshots": []
+		},
+		{
+			"name": "Mobile Wallet",
+			"description": "New wallet version for FFOS 2.2",
+			"icon": "/store/database/webapps/mobile-wallet/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/mobile-wallet/application.zip",
+				"manifest": "/store/database/webapps/mobile-wallet/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Anonymous"
+			],
+			"maintainer": [
+				"Anonymous"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "mobile-wallet; travel",
+				"categories": [
+					"travel"
+				]
+			},
+			"slug": "mobile-wallet",
+			"screenshots": []
+		},
+		{
+			"name": "Mochitest",
+			"description": "Mochitests",
+			"icon": "/store/database/webapps/mochitest/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/mochitest/application.zip",
+				"manifest": "/store/database/webapps/mochitest/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Ateam"
+			],
+			"maintainer": [
+				"The Ateam"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "mochitest; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "mochitest",
+			"screenshots": []
+		},
+		{
+			"name": "Music",
+			"description": "Gaia Music",
+			"icon": "/store/database/webapps/music/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/music/application.zip",
+				"manifest": "/store/database/webapps/music/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "music; multimedia",
+				"categories": [
+					"multimedia"
+				]
+			},
+			"slug": "music",
+			"screenshots": []
+		},
+		{
+			"name": "Music OGA",
+			"description": "Original Gaia Music app",
+			"icon": "/store/database/webapps/music-oga/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/music-oga/application.zip",
+				"manifest": "/store/database/webapps/music-oga/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "music-oga; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "music-oga",
+			"screenshots": []
+		},
+		{
+			"name": "Network Alerts",
+			"description": "Handling network alerts (like CMAS)",
+			"icon": "/store/database/webapps/network-alerts/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/network-alerts/application.zip",
+				"manifest": "/store/database/webapps/network-alerts/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "network-alerts; system",
+				"categories": [
+					"system"
+				]
+			},
+			"slug": "network-alerts",
+			"screenshots": []
+		},
+		{
+			"name": "NFC API tests",
+			"description": "",
+			"icon": "/store/database/webapps/nfc-api-test/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/nfc-api-test/application.zip",
+				"manifest": "/store/database/webapps/nfc-api-test/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The TW QA Team"
+			],
+			"maintainer": [
+				"The TW QA Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "nfc-api-test; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "nfc-api-test",
+			"screenshots": []
+		},
+		{
+			"name": "Notes",
+			"description": "",
+			"icon": "/store/database/webapps/notes/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/notes/application.zip",
+				"manifest": "/store/database/webapps/notes/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Mozilla Apps"
+			],
+			"maintainer": [
+				"Mozilla Apps"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "notes; utility",
+				"categories": [
+					"utility"
+				]
+			},
+			"slug": "notes",
+			"screenshots": []
+		},
+		{
+			"name": "OperatorVariant",
+			"description": "Operator variant configurator",
+			"icon": "/store/database/webapps/operatorvariant/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/operatorvariant/application.zip",
+				"manifest": "/store/database/webapps/operatorvariant/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "operatorvariant; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "operatorvariant",
+			"screenshots": []
+		},
+		{
+			"name": "PDF Viewer",
+			"description": "Portable Document Format (PDF) Viewer",
+			"icon": "/store/database/webapps/pdfjs/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/pdfjs/application.zip",
+				"manifest": "/store/database/webapps/pdfjs/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The pdf.js Team"
+			],
+			"maintainer": [
+				"The pdf.js Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "pdfjs; multimedia; utility",
+				"categories": [
+					"multimedia"
+				]
+			},
+			"slug": "pdfjs",
+			"screenshots": []
+		},
+		{
+			"name": "Ringtones",
+			"description": "Gaia Ringtone Manager",
+			"icon": "/store/database/webapps/ringtones/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/ringtones/application.zip",
+				"manifest": "/store/database/webapps/ringtones/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "ringtones; system",
+				"categories": [
+					"system"
+				]
+			},
+			"slug": "ringtones",
+			"screenshots": []
+		},
+		{
+			"name": "Search",
+			"description": "Gaia System Web Search",
+			"icon": "/store/database/webapps/search/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/search/application.zip",
+				"manifest": "/store/database/webapps/search/manifest.webapp"
+			},
+			"type": "search",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "search",
+				"categories": [
+					"search"
+				]
+			},
+			"slug": "search",
+			"screenshots": []
+		},
+		{
+			"name": "Settings",
+			"description": "Gaia Settings",
+			"icon": "/store/database/webapps/settings/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/settings/application.zip",
+				"manifest": "/store/database/webapps/settings/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "settings; utility",
+				"categories": [
+					"utility"
+				]
+			},
+			"slug": "settings",
+			"screenshots": [
+				"/store/database/webapps/settings/screenshots/0000.png",
+				"/store/database/webapps/settings/screenshots/0001.png"
+			]
+		},
+		{
+			"name": "Share Receiver",
+			"description": "Dummy app to respond to Share web activities",
+			"icon": "/store/database/webapps/share-receiver/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/share-receiver/application.zip",
+				"manifest": "/store/database/webapps/share-receiver/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "share-receiver; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "share-receiver",
+			"screenshots": []
+		},
+		{
+			"name": "Shared Tests",
+			"description": "Runs shared tests.",
+			"icon": "/store/database/webapps/sharedtest/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/sharedtest/application.zip",
+				"manifest": "/store/database/webapps/sharedtest/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "sharedtest; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "sharedtest",
+			"screenshots": []
+		},
+		{
+			"name": "Messages",
+			"description": "Gaia Messages",
+			"icon": "/store/database/webapps/sms/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/sms/application.zip",
+				"manifest": "/store/database/webapps/sms/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "sms; communication",
+				"categories": [
+					"communication"
+				]
+			},
+			"slug": "sms",
+			"screenshots": []
+		},
+		{
+			"name": "Sync",
+			"description": "Syncs data with Firefox Sync",
+			"icon": "/store/database/webapps/sync/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/sync/application.zip",
+				"manifest": "/store/database/webapps/sync/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "sync; utility; system",
+				"categories": [
+					"system"
+				]
+			},
+			"slug": "sync",
+			"screenshots": []
+		},
+		{
+			"name": "Template",
+			"description": "Web app template",
+			"icon": "/store/database/webapps/template/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/template/application.zip",
+				"manifest": "/store/database/webapps/template/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "template; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "template",
+			"screenshots": []
+		},
+		{
+			"name": "Test Agent",
+			"description": "Gaia Test Agent",
+			"icon": "/store/database/webapps/test-agent/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/test-agent/application.zip",
+				"manifest": "/store/database/webapps/test-agent/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "test-agent; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "test-agent",
+			"screenshots": []
+		},
+		{
+			"name": "Test Container",
+			"description": "Test framework container",
+			"icon": "/store/database/webapps/test-container/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/test-container/application.zip",
+				"manifest": "/store/database/webapps/test-container/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Ateam"
+			],
+			"maintainer": [
+				"The Ateam"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "test-container; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "test-container",
+			"screenshots": []
+		},
+		{
+			"name": "Test IAC Publisher",
+			"description": "Test Inter-App Communication API",
+			"icon": "/store/database/webapps/test-iac-publisher/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/test-iac-publisher/application.zip",
+				"manifest": "/store/database/webapps/test-iac-publisher/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The TW QA Team"
+			],
+			"maintainer": [
+				"The TW QA Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "test-iac-publisher; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "test-iac-publisher",
+			"screenshots": []
+		},
+		{
+			"name": "Test IAC Subscriber",
+			"description": "Test Inter-App Communication API",
+			"icon": "/store/database/webapps/test-iac-subscriber/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/test-iac-subscriber/application.zip",
+				"manifest": "/store/database/webapps/test-iac-subscriber/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The TW QA Team"
+			],
+			"maintainer": [
+				"The TW QA Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "test-iac-subscriber; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "test-iac-subscriber",
+			"screenshots": []
+		},
+		{
+			"name": "IME Tests",
+			"description": "Tests for InputMethod",
+			"icon": "/store/database/webapps/test-ime/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/test-ime/application.zip",
+				"manifest": "/store/database/webapps/test-ime/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "test-ime; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "test-ime",
+			"screenshots": []
+		},
+		{
+			"name": "Test OTASP",
+			"description": "OTASP receiver",
+			"icon": "/store/database/webapps/test-otasp/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/test-otasp/application.zip",
+				"manifest": "/store/database/webapps/test-otasp/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "test-otasp; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "test-otasp",
+			"screenshots": []
+		},
+		{
+			"name": "Test receiver#1",
+			"description": "Dummy app to respond to Test web activities",
+			"icon": "/store/database/webapps/test-receiver-1/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/test-receiver-1/application.zip",
+				"manifest": "/store/database/webapps/test-receiver-1/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "test-receiver-1; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "test-receiver-1",
+			"screenshots": []
+		},
+		{
+			"name": "Test Receiver#2",
+			"description": "Dummy app to respond to Test web activities",
+			"icon": "/store/database/webapps/test-receiver-2/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/test-receiver-2/application.zip",
+				"manifest": "/store/database/webapps/test-receiver-2/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "test-receiver-2; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "test-receiver-2",
+			"screenshots": []
+		},
+		{
+			"name": "Test receiver (inline)",
+			"description": "Dummy app to respond to Test web activities",
+			"icon": "/store/database/webapps/test-receiver-inline/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/test-receiver-inline/application.zip",
+				"manifest": "/store/database/webapps/test-receiver-inline/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "test-receiver-inline; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "test-receiver-inline",
+			"screenshots": []
+		},
+		{
+			"name": "Test Wap Push",
+			"description": "Wap Push Receiver",
+			"icon": "/store/database/webapps/test-wappush/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/test-wappush/application.zip",
+				"manifest": "/store/database/webapps/test-wappush/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "test-wappush; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "test-wappush",
+			"screenshots": []
+		},
+		{
+			"name": "Test theme 1",
+			"description": "Test theme with pink wallpaper",
+			"icon": "/store/database/webapps/theme-test-1/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/theme-test-1/application.zip",
+				"manifest": "/store/database/webapps/theme-test-1/manifest.webapp"
+			},
+			"type": "theme",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "theme-test-1; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "theme-test-1",
+			"screenshots": []
+		},
+		{
+			"name": "Test theme 2",
+			"description": "Test theme with fxos logo wallpaper",
+			"icon": "/store/database/webapps/theme-test-2/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/theme-test-2/application.zip",
+				"manifest": "/store/database/webapps/theme-test-2/manifest.webapp"
+			},
+			"type": "theme",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "theme-test-2; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "theme-test-2",
+			"screenshots": []
+		},
+		{
+			"name": "Broken theme 3",
+			"description": "Test theme with pink wallpaper",
+			"icon": "/store/database/webapps/theme-test-3/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/theme-test-3/application.zip",
+				"manifest": "/store/database/webapps/theme-test-3/manifest.webapp"
+			},
+			"type": "theme",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "theme-test-3; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "theme-test-3",
+			"screenshots": []
+		},
+		{
+			"name": "Twitter",
+			"description": "Twitter for mobile",
+			"icon": "/store/database/webapps/twitter/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/twitter/application.zip",
+				"manifest": "/store/database/webapps/twitter/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Twitter"
+			],
+			"maintainer": [
+				"Twitter"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "twitter; social; communication",
+				"categories": [
+					"social"
+				]
+			},
+			"slug": "twitter",
+			"screenshots": []
+		},
+		{
+			"name": "UI tests",
+			"description": "",
+			"icon": "/store/database/webapps/uitest/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/uitest/application.zip",
+				"manifest": "/store/database/webapps/uitest/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "uitest; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "uitest",
+			"screenshots": []
+		},
+		{
+			"name": "UI tests - Privileged App",
+			"description": "",
+			"icon": "/store/database/webapps/uitest-privileged/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/uitest-privileged/application.zip",
+				"manifest": "/store/database/webapps/uitest-privileged/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The TW QA Team"
+			],
+			"maintainer": [
+				"The TW QA Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "uitest-privileged; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "uitest-privileged",
+			"screenshots": []
+		},
+		{
+			"name": "uPnP Test",
+			"description": "uPnP Test App",
+			"icon": "/store/database/webapps/upnp-test/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/upnp-test/application.zip",
+				"manifest": "/store/database/webapps/upnp-test/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"Anonymous"
+			],
+			"maintainer": [
+				"Anonymous"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "upnp-test; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "upnp-test",
+			"screenshots": []
+		},
+		{
+			"name": "Legacy Home Screen",
+			"description": "Gaia Home Screen.",
+			"icon": "/store/database/webapps/verticalhome/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/verticalhome/application.zip",
+				"manifest": "/store/database/webapps/verticalhome/manifest.webapp"
+			},
+			"type": "homescreen",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "verticalhome; system",
+				"categories": [
+					"system"
+				]
+			},
+			"slug": "verticalhome",
+			"screenshots": []
+		},
+		{
+			"name": "Video",
+			"description": "Gaia Video",
+			"icon": "/store/database/webapps/video/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/video/application.zip",
+				"manifest": "/store/database/webapps/video/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "video; multimedia",
+				"categories": [
+					"multimedia"
+				]
+			},
+			"slug": "video",
+			"screenshots": []
+		},
+		{
+			"name": "Wallpaper",
+			"description": "Gaia Wallpaper Picker",
+			"icon": "/store/database/webapps/wallpaper/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/wallpaper/application.zip",
+				"manifest": "/store/database/webapps/wallpaper/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "wallpaper; system",
+				"categories": [
+					"system"
+				]
+			},
+			"slug": "wallpaper",
+			"screenshots": []
+		},
+		{
+			"name": "WAP Push manager",
+			"description": "Receives, filters and displays WAP Push messages",
+			"icon": "/store/database/webapps/wappush/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/wappush/application.zip",
+				"manifest": "/store/database/webapps/wappush/manifest.webapp"
+			},
+			"type": "system",
+			"license": "Apache 2.0",
+			"author": [
+				"The Gaia Team"
+			],
+			"maintainer": [
+				"The Gaia Team"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "wappush; education",
+				"categories": [
+					"education"
+				]
+			},
+			"slug": "wappush",
+			"screenshots": []
+		},
+		{
+			"name": "Weather",
+			"description": "Gaia Weather",
+			"icon": "/store/database/webapps/weather/favicon.png",
+			"git_repo": "",
+			"download": {
+				"url": "/store/database/webapps/weather/application.zip",
+				"manifest": "/store/database/webapps/weather/manifest.webapp"
+			},
+			"type": "webapp",
+			"license": "Apache 2.0",
+			"author": [
+				"MortCodesWeb"
+			],
+			"maintainer": [
+				"MortCodesWeb"
+			],
+			"has_ads": false,
+			"has_tracking": false,
+			"meta": {
+				"tags": "weather; news",
+				"categories": [
+					"news"
+				]
+			},
+			"slug": "weather",
+			"screenshots": []
+		}
+	]
+}

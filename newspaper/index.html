@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-l10n-id="newspaper">Newspaper</title>
+    <link rel="icon shortcut" href="style/icons/newspaper_256.png">
+
+    <!-- Building Blocks -->
+    <link rel="stylesheet" type="text/css" href="/shared/elements/gaia-theme/gaia-theme.css">
+    <link rel="stylesheet" type="text/css" href="/shared/style/layout.css">
+    <link rel="stylesheet" type="text/css" href="/shared/style/headers.css">
+    <link rel="stylesheet" type="text/css" href="/shared/style/switches.css">
+    <link rel="stylesheet" type="text/css" href="/shared/style/buttons.css">
+    <link rel="stylesheet" type="text/css" href="/shared/style/progress_activity.css">
+    <link rel="stylesheet" type="text/css" href="/style/footer.css">
+    <link rel="stylesheet" type="text/css" href="/style/body.css">
+    <link rel="stylesheet" type="text/css" href="style/newspaper.css">
+
+    <!-- Localization -->
+    <meta name="defaultLanguage" content="en-US">
+    <meta name="availableLanguages" content="ar, en-US">
+    <link rel="localization" href="/locales/website.{locale}.properties">
+    <link rel="localization" href="locales/newspaper.{locale}.properties">
+
+    <!-- Firefox Desktop shims -->
+    <script type="text/javascript" defer src="/shared/js/l10n.js"></script>
+    <script type="text/javascript" defer src="/js/header.js"></script>
+    <script type="text/javascript" defer src="/js/themes.js"></script>
+    <script type="text/javascript" defer src="/js/language.js"></script>
+
+    <!-- Web Components -->
+    <script type="text/javascript" src="js/newspaper.js"></script>
+  </head>
+  <body>
+    <section role="region" id="root">
+      <header id="header">
+        <input type="text" id="header-searchbox" data-l10n-id="searchbox" placeholder="Type here to search..." style="--order: 1;">
+        <menu type="toolbar" style="--order: 2;">
+          <button class="icon icon-menu"></button>
+        </menu>
+      </header>
+      <section>
+        <ul class="gaia-list active" id="news">
+          <div class="progress-holder">
+            <progress></progress>
+          </div>
+        </ul>
+        <footer class="links-footer">
+          <div class="safezone">
+            <ul>
+              <header data-l10n-id="contact-me">Contact Me</header>
+              <li><a href="https://discord.gg/QZvZFUgVhh">Discord</a></li>
+              <li><a href="https://www.twitter.com/@Killer0Mortada">Twitter</a></li>
+              <li><a href="mailto:mortcodesweb@gmail.com">Gmail</a></li>
+            </ul>
+            <ul>
+              <header data-l10n-id="products">Products</header>
+              <li disabled><a href="#">WOS</a></li>
+              <li><a href="../weather/" data-l10n-id="weather">Weather</a></li>
+              <li><a href="../newspaper/" data-l10n-id="newspaper">Newspaper</a></li>
+              <li><a href="../store/" data-l10n-id="store">Store</a></li>
+              <li><a href="../search/" data-l10n-id="search">Search</a></li>
+            </ul>
+            <ul>
+              <header data-l10n-id="developer">Developer</header>
+              <li><a href="https://developer.mozilla.com/">MDN Web Docs</a></li>
+              <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+            </ul>
+            <ul>
+              <header data-l10n-id="other">Other</header>
+              <li><a href="credits.html" data-l10n-id="credits" target="_blank">Credits</a></li>
+              <li>
+                <label class="pack-switch">
+                  <input type="checkbox" checked>
+                  <span>Dark Mode</span>
+                </label>
+              </li>
+              <li>
+                <p>Theme</p>
+                <select id="theme">
+                  <option value="">Default</option>
+                  <option value="skin-dark">Magenta</option>
+                  <option value="skin-comms">Green</option>
+                  <option value="skin-organic">Organic</option>
+                </select>
+              </li>
+            </ul>
+            <div class="info">
+              <p data-l10n-id="footer-title">MortCodesWeb <3 Web</p>
+              <p data-l10n-id="footer-info">Everything is created and designed by MortCodesWeb (Excluding B2G and Gaia)</p>
+              <p data-l10n-id="footer-info-code">Gaia and B2G i use are created by <a href="https://www.mozilla.org/">Mozilla</a></p>
+              <p>Used API: <a href="https://newsapi.org/">NewsAPI</a></p>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "short_name": "Newspaper",
+  "name": "Newspaper",
+  "description": "MortCodesWeb's Newspaper Webapp",
+  "start_url": "index.html",
+  "background_color": "#000",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000",
+  "icons": [
+    {
+      "src": "style/icons/newspaper_16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "style/icons/newspaper_32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "style/icons/newspaper_48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "style/icons/newspaper_64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "style/icons/newspaper_128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "style/icons/newspaper_256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "style/icons/newspaper.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ]
+}

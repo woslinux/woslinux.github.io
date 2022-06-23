@@ -1,0 +1,49 @@
+{
+  "activities": {
+    "marketplace-search": {"href": "/index.html"},
+    "marketplace-category": {"href": "/index.html"},
+    "marketplace-app": {"href": "/index.html"},
+    "marketplace-app-rating": {"href": "/index.html"}
+  },
+  "default_locale": "en-US",
+  "description": "WOS Marketplace",
+  "developer": {
+    "name": "MortCodesWeb",
+    "url": "http://www.github.com/woslinux/"
+  },
+  "icons": {
+    "16": "/style/icons/marketplace_16.png",
+    "32": "/style/icons/marketplace_32.png",
+    "48": "/style/icons/marketplace_48.png",
+    "64": "/style/icons/marketplace_64.png",
+    "128": "/style/icons/marketplace_128.png",
+    "256": "/style/icons/marketplace_256.png"
+  },
+  "launch_path": "/index.html",
+  "locales": {
+    "bg": {},
+    "ca": {},
+    "cs": {},
+    "de": {},
+    "el": {},
+    "en-US": {},
+    "es": {},
+    "eu": {},
+    "fr": {},
+    "ga-IE": {},
+    "hr": {},
+    "hu": {},
+    "it": {},
+    "pl": {},
+    "tr": {},
+    "zh-TW": {}
+  },
+  "name": "Marketplace",
+  "orientation": ["portrait-primary"],
+  "origin": "app://marketplace.woslinux.org",
+  "permissions": {
+    "mobilenetwork": {"description": "To detect mobile carrier and regional information."}
+  },
+  "type": "privileged",
+  "version": "20140422153147"
+}

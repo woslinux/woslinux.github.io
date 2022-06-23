@@ -1,0 +1,344 @@
+#webapp {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 20;
+  background: var(--header-background, #f4f4f4);
+  display: flex;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+#webapp.visible {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1.0);
+}
+
+#webapp > section {
+  overflow: auto;
+}
+
+#webapp a {
+  color: var(--accent-color);
+}
+
+#webapp a:active {
+  opacity: 0.75;
+}
+
+#webapp > section header {
+  background: none;
+}
+
+#webapp .webapp-keyart {
+  --color1: #00a8e8;
+  --color2: #40a060;
+  position: relative;
+  height: 150px;
+  width: calc(100% - 2rem);
+  max-width: 1024px;
+  margin: 1rem auto 0;
+  border-radius: 1.2rem 1.2rem 0 0;
+  background-image: linear-gradient(to bottom, var(--color1), var(--color2) 66.6%, transparent);
+}
+
+#webapp .webapp-keyart > .webapp-safezone {
+  height: 100%;
+  position: relative;
+}
+
+#webapp .webapp-keyart > .safezone {
+  height: 100%;
+  position: relative;
+  max-width: 768px;
+}
+
+#webapp .webapp-keyart .webapp-icon {
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  object-fit: contain;
+  top: calc(100% + 1rem);
+  border-radius: 25%;
+}
+html[dir="ltr"] #webapp .webapp-keyart .webapp-icon { left: 0; }
+html[dir="rtl"] #webapp .webapp-keyart .webapp-icon { right: 0; }
+
+#webapp .webapp-title {
+  font-size: 2.4rem;
+  margin: 1rem 0 0;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html[dir="ltr"] #webapp .webapp-title {
+  padding: 0 1rem 0 8rem;
+  text-align: left;
+}
+html[dir="rtl"] #webapp .webapp-title {
+  padding: 0 8rem 0 1rem;
+  text-align: right;
+}
+
+#webapp .webapp-category {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0.1rem 0;
+  color: #858585;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html[dir="ltr"] #webapp .webapp-category {
+  padding: 0 1rem 0 8rem;
+  text-align: left;
+}
+html[dir="rtl"] #webapp .webapp-category {
+  padding: 0 8rem 0 1rem;
+  text-align: right;
+}
+
+#webapp .webapp-author {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0.2rem 0;
+  color: var(--accent-color, #0061e0);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html[dir="ltr"] #webapp .webapp-author {
+  padding: 0 1rem 0 8rem;
+  text-align: left;
+}
+html[dir="rtl"] #webapp .webapp-author {
+  padding: 0 8rem 0 1rem;
+  text-align: right;
+}
+
+#webapp .webapp-detail {
+  padding: 1.5rem;
+  display: block;
+  overflow: hidden;
+  line-height: 2.2rem;
+  box-sizing: border-box;
+  transition: height 0.5s cubic-bezier(0.2, 0.9, 0.1, 1.0);
+}
+
+#webapp .webapp-detail.read-less {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  height: 5.2rem !important;
+  width: 100%;
+}
+html[dir="ltr"] #webapp .webapp-detail.read-less {
+  mask-image: linear-gradient(to right, white calc(100% - 4.5rem), transparent calc(100% - 1.5rem));
+}
+html[dir="rtl"] #webapp .webapp-detail.read-less {
+  mask-image: linear-gradient(to left, white calc(100% - 4.5rem), transparent calc(100% - 1.5rem));
+}
+
+#webapp .webapp-install button {
+  text-align: center !important;
+  display: block;
+  margin: 0;
+}
+
+html[dir="ltr"] #webapp .webapp-install button:nth-child(3) {
+  margin-left: 1rem;
+}
+html[dir="rtl"] #webapp .webapp-install button:nth-child(3) {
+  margin-right: 1rem;
+}
+
+#webapp .webapp-install div {
+  width: 100%;
+}
+
+#webapp .webapp-install div canvas {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.4rem;
+  background: var(--background);
+}
+
+#webapp .webapp-readmore,
+#webapp .webapp-readless {
+  text-align: center !important;
+  display: block;
+  margin: 0;
+}
+
+#webapp .webapp-screenshots {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 200px;
+  margin: 1rem auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  width: calc(100% - 2rem);
+  scroll-snap-type: x mandatory;
+  position: relative;
+}
+
+#webapp .webapp-screenshots:empty:before {
+  content: '\e905';
+  font-size: 10rem;
+  font-family: 'gaia-icons';
+  opacity: 0.25;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+#webapp .webapp-screenshots img {
+  float: left;
+  border-radius: 0.9rem;
+  scroll-snap-align: start;
+  image-rendering: optimizespeed;
+  -moz-margin-end: 0.3rem;
+}
+
+#webapp .webapp-screenshots img:last-child {
+  margin: 0;
+}
+
+#webapp .webapp-safezone {
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+  max-width: 768px;
+}
+
+#webapp .webapp-tags {
+  width: calc(100% - 9rem);
+  overflow-x: auto;
+}
+html[dir="ltr"] #webapp .webapp-tags {
+  padding: 0 1rem 0 8rem;
+  mask-image: linear-gradient(to right, transparent 6rem, white 8rem, white calc(100% - 2rem), transparent);
+}
+html[dir="rtl"] #webapp .webapp-tags {
+  padding: 0 8rem 0 1rem;
+  mask-image: linear-gradient(to left, transparent 6rem, white 8rem, white calc(100% - 2rem), transparent);
+}
+
+#webapp .webapp-tags > span {
+  border-radius: 1.5rem;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-color);
+  background: var(--background-plus);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  -moz-margin-end: 0.5rem;
+}
+
+#webapp span[data-icon="tick-circle"]:before {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin: 0 0.6rem;
+}
+
+#webapp .webapp-ratings {
+  font-size: 2.4rem;
+  padding: 0;
+  height: 2.4rem;
+  width: 12rem;
+  background: url(images/star.svg) top left / 2.4rem;
+  position: relative;
+  -moz-margin-end: 5rem;
+}
+
+#webapp .webapp-ratings:before {
+  content: '';
+  position: absolute;
+  background: url(images/star_filled.svg) top left / 2.4rem;
+  width: var(--width);
+  height: 100%;
+  left: 0;
+}
+
+#webapp .webapp-ratings:after {
+  content: attr(data-rating);
+  position: absolute;
+  top: 0;
+  line-height: 2.4rem;
+  font-size: 2.4rem;
+  color: #ffc000;
+  font-weight: 500;
+  max-width: 3.5rem;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  direction: ltr;
+}
+html[dir="ltr"] #webapp .webapp-ratings:after { left: calc(100% + 1rem); }
+html[dir="rtl"] #webapp .webapp-ratings:after { right: calc(100% + 1rem); }
+
+#webapp #comments iframe {
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  #webapp .split-section {
+    width: 50%;
+    box-sizing: border-box;
+  }
+  html[dir="ltr"] #webapp .split-section {
+    float: left;
+    padding: 1rem 1rem 1rem 0;
+  }
+  html[dir="rtl"] #webapp .split-section {
+    float: right;
+    padding: 1rem 0 1rem 1rem;
+  }
+
+  #webapp .split-section:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  html[dir="ltr"] #webapp .split-section:nth-child(2n) {
+    float: left;
+    padding: 1rem 0 1rem 1rem;
+  }
+  html[dir="rtl"] #webapp .split-section:nth-child(2n) {
+    float: right;
+    padding: 1rem 1rem 1rem 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #webapp .split-section {
+    width: 60%;
+  }
+
+  #webapp .split-section:nth-child(2n) {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  #webapp .split-section {
+    width: 75%;
+  }
+
+  #webapp .split-section:nth-child(2n) {
+    width: 25%;
+  }
+}

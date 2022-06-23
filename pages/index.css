@@ -1,0 +1,459 @@
+/* Posters */
+.posters {
+  height: 60vw;
+  margin: 1rem;
+}
+
+.poster {
+  background: #000;
+  overflow: hidden;
+  display: none;
+  border-radius: 1.2rem;
+  position: relative;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: transform 0.3s ease;
+  animation: zoom-in 0.5s ease forwards 0.5s;
+}
+html[dir="ltr"] .poster {
+  float: left;
+}
+html[dir="rtl"] .poster {
+  float: right;
+}
+
+.poster:nth-child(2) {
+  margin-bottom: 1rem;
+  animation-delay: 0.375s;
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+html[dir="ltr"] .reversed .poster {
+  float: right;
+}
+html[dir="rtl"] .reversed .poster {
+  float: left;
+}
+
+.poster.big {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  animation-delay: 0.25s;
+}
+
+.poster:active {
+  box-shadow: none;
+  filter: opacity(0.8);
+}
+
+.poster > * {
+  pointer-events: none;
+}
+
+.poster > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.poster > img:nth-child(2) {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.6);
+}
+
+.poster:hover > img:nth-child(2) {
+  transform: scale(1.0625);
+  filter: brightness(0.9) drop-shadow(0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.3));
+}
+
+.poster > h1 {
+  margin: 0 7.5%;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  z-index: 3;
+  text-shadow: 0 0.1rem 0 #333;
+}
+
+.poster.big > h1 {
+  margin: 0 10%;
+  font-size: 3.5rem;
+}
+
+.poster > p {
+  font-size: 1.6rem;
+  margin: 0 7.5% 1rem;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+  font-weight: 500;
+  text-shadow: 0 0.1rem 0 #333;
+}
+
+.poster.big > p {
+  font-size: 1.6rem;
+  margin: 0 10% 1rem;
+}
+
+.poster:hover > h1,
+.poster:hover > p {
+  text-shadow: 0 0.1rem 0.2rem #333, 0 0.2rem 0.8rem #333;
+}
+
+.poster > span {
+  color: #000;
+  padding: 0.5rem 2rem;
+  position: relative;
+  z-index: 3;
+  font-size: 1.6rem;
+  margin: 0 7.5% 1rem;
+  width: fit-content;
+  border-radius: 2rem;
+  font-weight: bold;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+  transition: background-position 0.3s ease;
+}
+html[dir="ltr"] .poster > span {
+  background: #fff url(/style/images/right.svg) no-repeat right 1.5rem center / 2rem;
+  padding-right: 5rem;
+}
+html[dir="rtl"] .poster > span {
+  background: #fff url(/style/images/left.svg) no-repeat left 1.5rem center / 2rem;
+  padding-left: 5rem;
+}
+
+.poster.big > span {
+  margin: 0 10% 1rem;
+}
+
+.poster:hover > span {
+  text-decoration: underline;
+}
+html[dir="ltr"] .poster:hover > span {
+  background-position: right 1rem center;
+}
+html[dir="rtl"] .poster:hover > span {
+  background-position: left 1rem center;
+}
+
+/* Cards */
+.cards {
+  opacity: 0;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 1rem;
+  border-radius: 1.2rem;
+  background: var(--button-background);
+  padding: 0.3rem;
+  animation: fade-in 0.5s ease forwards 0.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  min-width: 25.6rem;
+  max-width: 33.2rem;
+  position: relative;
+  display: block;
+  flex-grow: 1;
+  padding: 1rem;
+  text-decoration: none;
+  box-sizing: border-box;
+  height: 9.8rem;
+  border-radius: 0.9rem;
+  transition: background-color 0.2s;
+}
+html[dir="ltr"] .card {
+  padding-left: 14rem;
+}
+html[dir="rtl"] .card {
+  padding-right: 14rem;
+}
+
+.card:hover {
+  background: var(--translucent);
+  transition: none;
+}
+
+.card:active {
+  background: var(--translucent-plus);
+  transition: none;
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 100%;
+  top: 0;
+  box-sizing: border-box;
+  border-bottom: solid 0.1rem rgba(0,0,0,0.125);
+}
+
+.card:hover:after,
+.card:active:after,
+.card:last-child:after {
+  display: none;
+}
+
+.card > * {
+  pointer-events: none;
+}
+
+.card > img {
+  width: 12rem;
+  height: 7.75rem;
+  object-fit: cover;
+  box-sizing: border-box;
+  position: absolute;
+  top: 1rem;
+  border-radius: 0.4rem;
+}
+html[dir="ltr"] .card > img {
+  left: 1rem;
+}
+html[dir="rtl"] .card > img {
+  right: 1rem;
+}
+
+.card > h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-color);
+  line-height: 2.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  z-index: 1;
+  position: relative;
+}
+
+.card > p {
+  margin: 0;
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.card > span {
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+  color: var(--accent-color);
+  width: fit-content;
+  z-index: 1;
+  position: relative;
+  transition: background-position 0.3s ease;
+}
+html[dir="ltr"] .card > span {
+  background: url(/style/images/right.svg) no-repeat right 1rem center / 2rem;
+  padding-right: 4rem;
+}
+html[dir="rtl"] .card > span {
+  background: url(/style/images/left.svg) no-repeat left 1rem center / 2rem;
+  padding-left: 4rem;
+}
+
+.card:hover > span {
+  text-decoration: underline;
+}
+html[dir="ltr"] .card:hover > span {
+  background-position: right 0.5rem center;
+}
+html[dir="rtl"] .card:hover > span {
+  background-position: left 0.5rem center;
+}
+
+/* New Badges */
+.poster.new:before,
+.card.new:before {
+  content: 'New!';
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0.3rem 2rem;
+  background: linear-gradient(45deg, #ffc000, #c08000);
+  border-radius: 1rem 0 1rem 0;
+  z-index: 4;
+  font-size: 1.6rem;
+  color: #000;
+  direction: ltr;
+}
+
+/* Info panels */
+.info-panel {
+  background: var(--background-plus);
+  font-size: 1.6rem;
+  display: flex;
+  padding: 1rem calc(50% - (768px / 2));
+  align-items: center;
+  flex-direction: column;
+}
+
+.info-panel:nth-child(2n) {
+  background: var(--button-background);
+}
+
+.info-panel img {
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.info-panel h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0 2rem;
+}
+
+.info-panel p {
+  padding: 0 2rem;
+}
+
+.info-panel div {
+  width: 100%;
+}
+
+/* Header */
+.page-header {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 4.2rem;
+  height: 3rem;
+  line-height: 3rem;
+  margin: 1rem 0 -1rem;
+}
+
+@media screen and (min-width: 600px) {
+  /* Posters */
+  .posters {
+    height: 50vh;
+    max-height: 40rem;
+    margin: 2.4rem 1rem 1rem;
+  }
+
+  .poster {
+    width: 25%;
+    height: calc(50% - 1rem);
+    display: flex;
+  }
+
+  .poster.big {
+    width: calc(75% - 1rem);
+    height: calc(100% - 1rem);
+  }
+  html[dir="ltr"] .poster.big {
+    margin-right: 1rem;
+  }
+  html[dir="rtl"] .poster.big {
+    margin-left: 1rem;
+  }
+
+  .reversed .poster.big {
+    -moz-margin-start: 1rem;
+    -moz-margin-end: unset;
+  }
+
+  .poster.big > h1 {
+    font-size: 4.5rem;
+  }
+
+  /* Cards */
+  .cards {
+    margin: 1rem 1rem 2.4rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+  }
+
+  .card {
+    padding: 15rem 2rem 1rem !important;
+    height: auto;
+  }
+
+  .card:after {
+    display: none;
+  }
+
+  .card > img {
+    border-radius: 0.6rem;
+    left: 1rem;
+    top: 1rem;
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    mask-image: linear-gradient(to bottom, white, transparent 70%);
+    -webkit-mask-image: linear-gradient(to bottom, white, transparent 70%);
+  }
+
+  /* Info panels */
+  .info-panel {
+    flex-direction: row;
+  }
+
+  .info-panel:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
+  html[dir="ltr"] .info-panel:nth-child(2n) div {
+    text-align: right;
+  }
+  html[dir="rtl"] .info-panel:nth-child(2n) div {
+    text-align: left;
+  }
+
+  .info-panel img {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .info-panel div {
+    width: 50%;
+    flex: 1;
+  }
+}
+
+

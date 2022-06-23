@@ -1,0 +1,404 @@
+body.gsc-overflow-hidden {
+  overflow: unset !important;
+}
+
+section .gsc-results-wrapper-visible {
+  position: static !important;
+  box-shadow: none !important;
+  background: var(--background-plus);
+  border-radius: 1.2rem;
+  margin: 1rem auto;
+  padding: 0.3rem 0.3rem 1.5rem;
+  max-width: 1024px;
+  width: calc(100% - 2rem);
+  transition: none;
+  box-sizing: border-box;
+}
+
+section .gsc-modal-background-image-visible {
+  display: none !important;
+}
+
+section .gsc-control-cse {
+  background: var(--background-theta);
+  padding: 1.5rem 0;
+  border: none;
+}
+
+section .gsc-webResult.gsc-result {
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: solid 0.1rem rgba(0,0,0,0.125);
+  transition: background-color 0.2s;
+}
+
+section .gsc-webResult.gsc-result:hover {
+  background-color: var(--translucent);
+  transition: none;
+}
+
+section .gsc-webResult.gsc-result:active {
+  background-color: var(--translucent-plus);
+  transition: none;
+}
+
+section .gs-result .gs-title *,
+section .gsc-cursor-page,
+section .gs-spelling a {
+  color: var(--accent-color);
+}
+
+section .gs-promotion .gs-visibleUrl,
+section .gs-webResult .gs-visibleUrl {
+  margin: 1rem 0;
+}
+
+section .gsc-control-cse .gsc-table-result,
+section .gsc-result-info,
+section .gs-promotion .gs-visibleUrl,
+section .gs-webResult .gs-visibleUrl {
+  font-size: 1.4rem;
+  color: #858585 !important;
+}
+
+section .gs-webResult .gs-snippet,
+section .gs-fileFormatType {
+  color: var(--text-color);
+}
+
+section .gsc-option-menu-container {
+  border: none;
+  background: var(--button-background);
+  font-size: 1.6rem !important;
+  color: var(--text-color) !important;
+  border-radius: 0.4rem;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0 1rem;
+}
+
+section .gsc-selected-option-container {
+  background: none;
+  color: var(--text-color);
+  border: none;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+section .gsc-tabsArea,
+section .gsc-above-wrapper-area {
+  border-bottom: solid 0.1rem rgba(0,0,0,0.125);
+}
+
+section .gsc-above-wrapper-area {
+  padding: 1rem 0;
+}
+
+section .gsc-result-info {
+  padding: 0.5rem 1rem;
+}
+
+section .gsc-option-menu {
+  border: solid 0.1rem rgba(127,127,127,0.75) !important;
+  background: var(--button-background) !important;
+  font-size: 1.6rem !important;
+  color: var(--text-color) !important;
+  border-radius: 1.2rem;
+  padding: 1rem !important;
+}
+
+section .gsc-option-menu-item {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  transition: background-color 0.2s;
+  border-radius: 0.4rem;
+}
+
+section .gsc-option-menu-item:hover {
+  background-color: var(--translucent);
+  transition: none;
+}
+
+section .gsc-option-menu-item:active {
+  background-color: var(--translucent-plus);
+  transition: none;
+}
+
+section .gsc-option-menu-item.gsc-option-menu-item-highlighted {
+  background: var(--accent-color);
+  color: var(--text-color-minus);
+}
+
+section .gsc-input-box {
+  border: none;
+  background: var(--background-theta);
+  border-radius: 0.6rem;
+  height: 4rem;
+}
+
+section .gsib_a {
+  padding: 0.85rem 1rem;
+}
+
+section input.gsc-input {
+  background: none !important;
+  color: var(--text-color);
+  font-family: unset;
+}
+
+section .gsc-tabHeader.gsc-tabhActive {
+  color: var(--accent-color);
+  border-bottom: solid 0.2rem var(--accent-color);
+}
+
+section .gsc-tabHeader.gsc-tabhInactive {
+  color: #858585;
+}
+
+section .gsc-results-close-btn-visible {
+  display: none;
+}
+
+section .gsc-tabsArea {
+  margin: 0;
+  height: 4rem;
+  margin: -0.3rem -0.3rem 0.3rem;
+  overflow: hidden;
+  background: var(--background);
+  border-radius: 1.2rem 1.2rem 0 0;
+  border: none;
+}
+
+section .gsc-results .gsc-cursor-box .gsc-cursor-page {
+  color: var(--text-color);
+  height: 4rem;
+  line-height: 4rem;
+  min-width: 4rem;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  font-size: 1.6rem;
+  display: inline-block;
+  border-radius: 2rem;
+  transition: background-color 0.2s;
+}
+
+section .gsc-results .gsc-cursor-box .gsc-cursor-page:hover {
+  background: var(--translucent);
+  transition: none;
+}
+
+section .gsc-results .gsc-cursor-box .gsc-cursor-page:active {
+  background: var(--translucent-plus);
+  transition: none;
+}
+
+section .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+  background: var(--accent-color) !important;
+  color: var(--text-color-minus);
+}
+
+section .gcsc-find-more-on-google,
+section .gcsc-find-more-on-google-magnifier {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: var(--accent-color);
+}
+
+section .gs-image,
+section .gs-imageResult {
+  border-radius: 1rem;
+  overflow: hidden !important;
+}
+
+section .gsc-imageResult {
+  margin: 1rem 0;
+}
+
+section .gs-image-popup-box {
+  padding: 1rem 1.5rem !important;
+  box-sizing: border-box;
+  width: 100% !important;
+  margin: 0 !important;
+  border-radius: 0 0 1rem 1rem;
+  animation: imagePopupBoxSlide 0.2s ease;
+}
+
+@keyframes imagePopupBoxSlide {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+section .gs-imageResult:not(.gs-no-results-result) .gs-snippet {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+section .gsc-imageResult .gs-imageResult-popup {
+  overflow: hidden !important;
+  border-radius: 1rem;
+}
+
+section .gs-imagePreviewArea {
+  background: var(--background-theta);
+  border-radius: 1rem;
+  margin: 0 1rem 1rem;
+  width: calc(100% - 2rem);
+  overflow: hidden;
+  animation: imagePreviewSlide 0.2s ease;
+}
+
+@keyframes imagePreviewSlide {
+  from {
+    transform: translateY(-32px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+section .gs-previewTitle,
+section .gs-previewUrl,
+section .gs-previewSize,
+section .gs-previewDescription,
+section .gs-previewLink {
+  color: var(--text-color);
+}
+
+section .gs-imageResult-popup .gs-image-thumbnail-box {
+  padding: 0;
+  margin: 0;
+}
+
+section .gs-imageResult .gs-text-box {
+  color: rgba(255,255,255,0.5);
+}
+
+body .gstl_50.gssb_c {
+  background: var(--background-plus);
+  padding: 1rem;
+  border-radius: 1.2rem;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+}
+
+body .gssb_e {
+  box-shadow: none;
+}
+
+body .gsc-completion-container {
+  box-shadow: none;
+  background: none;
+  border: none;
+}
+
+body .gssb_a {
+  line-height: 4rem;
+  height: 4rem;
+  padding: 0 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 0.6rem;
+  transition: background-color 0.2s;
+}
+
+body .gssb_a:hover {
+  background: var(--translucent);
+  transition: none;
+}
+
+body .gssb_a:active {
+  background: var(--translucent-plus);
+  transition: none;
+}
+
+body .gsc-completion-selected {
+  background: none !important;
+}
+
+section form.gsc-search-box {
+  display: none;
+}
+
+section .gsc-results .gsc-cursor {
+  fill: var(--text-color);
+  color: var(--text-color);
+}
+
+section .gsc-cursor-container-next {
+  flex: unset;
+}
+
+section .gsc-cursor-next-page {
+  margin: 0;
+}
+
+section .gsc-results .gsc-cursor-box {
+  background: transparent;
+  border: none;
+  margin: 1rem;
+  border-radius: 0.4rem;
+}
+
+section .gcsc-more-maybe-branding-box {
+  background: var(--button-background);
+  border: none;
+  margin: 0 0 1rem;
+  border-radius: 0.4rem;
+}
+
+section .gs-mobilePreview {
+  border-radius: 1rem;
+  overflow: hidden;
+  animation: imagePreviewSlide 0.2s ease;
+}
+
+section .gsc-control-cse .gsc-option-selector {
+  background: url(images/expand-chevron.svg) no-repeat center / 2rem;
+  width: 2rem;
+  height: 2rem;
+  margin: -1rem -0.8rem;
+}
+
+section .gsc-tabHeader {
+  height: 4rem;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  line-height: 3.7rem;
+  padding: 0 2rem;
+}
+
+section .gsc-results {
+  width: 100%;
+}
+
+section .gsc-orderby {
+  padding: 0 1rem;
+}
+
+section .gs-result .gs-image,
+section .gs-result .gs-promotion-image {
+  border: none;
+}
+
+@supports (backdrop-filter: blur(32px)) {
+  section .gs-image-popup-box {
+    backdrop-filter: blur(32px);
+    background: rgba(51,51,51,0.3) !important;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  section .gsc-results-wrapper-visible {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1) !important;
+  }
+}

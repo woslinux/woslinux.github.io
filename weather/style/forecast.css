@@ -1,0 +1,105 @@
+.weather-forecast {
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+  max-width: 600px;
+  border-radius: 0.8rem;
+  background: rgba(0,0,0,0.1);
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+  flex-direction: column;
+  height: 12rem;
+  position: relative;
+  scroll-snap-type: y mandatory;
+  box-shadow: inset 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.weather-forecast > div {
+  margin: 0;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  font-size: 1.6rem;
+  width: 25%;
+  scroll-snap-align: start;
+}
+
+.weather-forecast > div > .icon {
+  background: transparent no-repeat center / 48px;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+}
+.weather-forecast > div > .icon[data-state="sunny"] {
+  background-image: url(images/weather-not-cloudy.svg);
+}
+.weather-forecast > div > .icon[data-state="sunny-cloudy"] {
+  background-image: url(images/weather-partly-cloudy.svg);
+}
+.weather-forecast > div > .icon[data-state="night"] {
+  background-image: url(images/weather-night.svg);
+}
+.weather-forecast > div > .icon[data-state="night-cloudy"] {
+  background-image: url(images/weather-partly-cloudy-night.svg);
+}
+.weather-forecast > div > .icon[data-state="cloudy"] {
+  background-image: url(images/weather-cloudy.svg);
+}
+.weather-forecast > div > .icon[data-state="cloudy-broken"] {
+  background-image: url(images/weather-cloudy-broken.svg);
+}
+.weather-forecast > div > .icon[data-state="raining"] {
+  background-image: url(images/weather-raining.svg);
+}
+.weather-forecast > div > .icon[data-state="shower-rain"] {
+  background-image: url(images/weather-shower-rain.svg);
+}
+.weather-forecast > div > .icon[data-state="thunderstorm"] {
+  background-image: url(images/weather-thunderstorm.svg);
+}
+.weather-forecast > div > .icon[data-state="mist"] {
+  background-image: url(images/weather-mist.svg);
+}
+
+.weather-forecast span {
+  font-size: 1.6rem;
+  font-weight: normal;
+  opacity: 0.75;
+  color: #fff;
+  pointer-events: none;
+}
+
+.weather-forecast span:first-of-type {
+  font-weight: bold;
+  opacity: 1;
+}
+
+.forecast-title {
+  font-size: 1.6rem;
+  max-width: 600px;
+  margin: 1rem auto 0;
+  width: calc(100% - 2rem);
+  border-top: solid 0.1rem rgba(0,0,0,0.125);
+  display: block;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.forecast-title:empty {
+  padding: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .weather-forecast > div {
+    width: calc(100% / 6);
+  }
+}
+`

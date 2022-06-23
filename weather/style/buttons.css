@@ -1,0 +1,21 @@
+button.gaia-icon {
+  padding-left: 4.5rem;
+}
+
+button.gaia-icon:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5rem;
+  left: 1rem;
+  font-size: 2.4rem;
+}
+
+html[dir="rtl"] button.gaia-icon {
+  padding-left: 1.5rem;
+  padding-right: 4.5rem;
+}
+
+html[dir="rtl"] button.gaia-icon:before {
+  left: unset;
+  right: 1rem;
+}
