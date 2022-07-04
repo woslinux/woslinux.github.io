@@ -20,6 +20,7 @@
   line-height: 3rem;
   height: 3rem;
   margin: 0 0 -1rem;
+  opacity: 0.5;
 }
 
 .webapps .category ul {
@@ -42,7 +43,7 @@
   display: none;
 }
 
-.webapps .category ul > li {
+.webapps .category ul li {
   min-width: 9.8rem;
   max-width: 9.8rem;
   float: left;
@@ -66,7 +67,7 @@
   }
 }
 
-.webapps .category ul > li a {
+.webapps .category ul li a {
   text-decoration: none;
   color: var(--text-color, #333);
   width: 100%;
@@ -86,11 +87,11 @@
   border-radius: 25%;
 }
 
-.webapps .category ul > li div {
+.webapps .category ul li div {
   width: 100%;
 }
 
-.webapps .category ul > li p {
+.webapps .category ul li p {
   margin: 0;
   font-size: 1.2rem;
   line-height: 1.8rem;
@@ -101,19 +102,19 @@
   text-overflow: ellipsis;
 }
 
-.webapps .category ul > li p:first-child {
+.webapps .category ul li p:first-child {
   font-size: 1.4rem;
 }
 
-.webapps .category ul > li p:last-child {
+.webapps .category ul li p:last-child {
   color: var(--accent-color, #0061e0);
 }
 
-.webapps .category ul > li.installing p:not(.title) {
+.webapps .category ul li.installing p:not(.title) {
   display: none;
 }
 
-.webapps .category ul > li .percentage {
+.webapps .category ul li .percentage {
   font-size: 1.6rem;
   font-weight: 500;
   margin: 0.2rem 0;
@@ -122,7 +123,7 @@
   display: block;
 }
 
-.webapps .category ul > li .progress {
+.webapps .category ul li .progress {
   width: calc(100% - 2rem);
   margin: 0 1rem 0;
   border-radius: 0.3rem;
@@ -131,8 +132,8 @@
   display: block;
 }
 
-.webapps .category ul > li:not(.installing) .percentage,
-.webapps .category ul > li:not(.installing) .progress {
+.webapps .category ul li:not(.installing) .percentage,
+.webapps .category ul li:not(.installing) .progress {
   display: none;
 }
 
@@ -167,15 +168,29 @@
 
   .webapps .category {
     margin: 0 auto;
-    max-width: 768px;
+    max-width: 1024px;
     width: calc(100% - 2rem);
   }
 
   .webapps .category > header {
     margin-top: 1rem;
+    max-width: 1024px;
   }
 
   .webapps .category > ul {
     margin-bottom: 1rem;
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .webapps .category ul li {
+    min-width: 12rem;
+    max-width: 12rem;
+  }
+
+  .webapps .category ul li img {
+    width: 8rem;
+    height: 8rem;
   }
 }

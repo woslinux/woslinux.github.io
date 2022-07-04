@@ -1,8 +1,20 @@
 'use strict';
-
-window.onlogin = function(data) {};
+import { getUsername, getProfilePicture, isUserLoggedIn } from '/js/firebase.js';
 
 document.addEventListener('DOMContentLoaded', function() {
+  var loginButton = document.getElementById('login-button');
+  var avatar = document.getElementById('profile-picture');
+  getUsername(function(data) {
+    avatar.title = data;
+  });
+  getProfilePicture(function(data) {
+    avatar.style.backgroundImage = 'url(' + data + ')';
+  });
+
+  if (isUserLoggedIn) {
+    loginButton.style.display = 'none';
+  }
+
   var frame = document.getElementById('frame');
   function parseMCWEmbed(file) {
     file = file !== '' ? file : 'pages/index.html';

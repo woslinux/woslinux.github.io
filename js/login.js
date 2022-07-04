@@ -1,4 +1,5 @@
 'use strict';
+import { inputUserData } from '/js/firebase.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   var email = document.getElementById('email');
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   submitButton.onclick = function(evt) {
     evt.preventDefault();
     try {
-      window.WOS_LOGIN.inputUserData(email.value, password.value);
+      inputUserData(email.value, password.value);
     } catch(e) {
       error.classList.remove('hidden');
     }

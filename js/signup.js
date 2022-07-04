@@ -1,4 +1,5 @@
 'use strict';
+import { writeUserData } from '/js/firebase.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   var username = document.getElementById('username');
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     evt.preventDefault();
     if (password.value == passwordConfirm.value) {
       try {
-        window.WOS_LOGIN.writeUserData(username.value, email.value, password.value, profilePicture);
+        writeUserData(username.value, email.value, password.value, profilePicture);
       } catch(e) {
         error.classList.remove('hidden');
       }

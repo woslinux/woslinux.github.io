@@ -134,7 +134,6 @@ html[dir="rtl"] #posters > .container .poster:after {
   position: relative;
   font-weight: 400;
   font-size: 3rem;
-  text-shadow: 0 0.1rem 0.2rem var(--color-secondary, #000), 0 0.2rem 0.8rem var(--color-secondary, #000);
 }
 
 #posters > .container .poster p {
@@ -146,7 +145,6 @@ html[dir="rtl"] #posters > .container .poster:after {
   position: relative;
   font-weight: bold;
   font-size: 1.6rem;
-  text-shadow: 0 0.1rem 0.2rem var(--color-primary, #fff), 0 0.2rem 0.8rem var(--color-primary, #fff);
 }
 
 #posters > .dots {

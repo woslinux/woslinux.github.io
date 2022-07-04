@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="/shared/style/animations.css">
     <link rel="stylesheet" type="text/css" href="/shared/style/input_areas.css">
     <link rel="stylesheet" type="text/css" href="/shared/style/object_menu.css">
+    <link rel="stylesheet" type="text/css" href="/shared/style/status.css">
     <link rel="stylesheet" type="text/css" href="/style/body.css">
     <link rel="stylesheet" type="text/css" href="/style/warnings.css">
     <link rel="stylesheet" type="text/css" href="/style/cursors/cursors.css">
@@ -43,14 +44,14 @@
     <script defer type="text/javascript" src="/js/themes.js"></script>
     <script defer type="text/javascript" src="/js/language.js"></script>
     <script defer type="text/javascript" src="/js/overscroll.js"></script>
-    <script defer type="module" src="/js/firebase.js"></script>
-    <script defer type="text/javascript" src="js/main.js"></script>
+    <script defer type="module" src="js/main.js"></script>
     <script defer type="text/javascript" src="js/image_viewer.js"></script>
     <script defer type="text/javascript" src="js/store.js"></script>
     <script defer type="text/javascript" src="js/search.js"></script>
     <script defer type="text/javascript" src="js/download.js"></script>
     <script defer type="text/javascript" src="js/posters.js"></script>
     <script defer type="text/javascript" src="js/context_menu.js"></script>
+    <script defer type="module" src="js/submit.js"></script>
   </head>
   <body class="vbox">
     <section id="loading-screen">
@@ -69,7 +70,7 @@
         <a href="#" class="icon icon-menu" id="menu-button"></a>
         <menu type="toolbar">
           <a href="#" class="icon icon-add" id="submit-button"></a>
-          <a href="/login.html" data-l10n-id="login" id="login-button" title="Not Available">Login</a>
+          <a href="/login.html" data-l10n-id="login" id="login-button">Login</a>
           <a href="/?p=account" id="profile-picture"></a>
         </menu>
         <h1 data-l10n-id="store">Marketplace</h1>
@@ -277,9 +278,9 @@
         <ul>
           <li class="input">
             <label>
-              <span>App Name</span>
+              <span>App Name*</span>
               <p>
-                <input type="text">
+                <input type="text" data-input="name">
                 <button type="reset"></button>
               </p>
             </label>
@@ -288,16 +289,16 @@
             <label>
               <span>Description</span>
               <p>
-                <input type="text">
+                <input type="text" data-input="description">
                 <button type="reset"></button>
               </p>
             </label>
           </li>
           <li class="input">
             <label>
-              <span>App Icon</span>
+              <span>App Icon*</span>
               <p>
-                <input type="file">
+                <input type="file" data-input="icon">
               </p>
             </label>
           </li>
@@ -305,24 +306,32 @@
             <label>
               <span>Github Repository</span>
               <p>
-                <input type="text">
+                <input type="text" data-input="git-repo">
                 <button type="reset"></button>
               </p>
             </label>
           </li>
           <li class="input">
             <label>
-              <span>App Archive</span>
+              <span>App Archive*</span>
               <p>
-                <input type="file">
+                <input type="file" data-input="download">
               </p>
             </label>
           </li>
           <li class="input">
             <label>
-              <span>App Type</span>
+              <span>App Manifest*</span>
               <p>
-                <select>
+                <input type="file" data-input="manifest">
+              </p>
+            </label>
+          </li>
+          <li class="input">
+            <label>
+              <span>App Type*</span>
+              <p>
+                <select data-input="role">
                   <option value="default">Default</option>
                   <option value="webapp">Webapp (PWA)</option>
                 </select>
@@ -333,7 +342,7 @@
             <label>
               <span>License</span>
               <p>
-                <select>
+                <select data-input="license">
                   <option value="apache-2.0">Apache 2.0</option>
                   <option value="mit">MIT</option>
                 </select>
@@ -342,13 +351,13 @@
           </li>
           <li class="input bb-checkbox">
             <label>
-              <input type="checkbox">
+              <input type="checkbox" data-input="has-ads">
               <span data-icon="tick">Has Advertisements</span>
             </label>
           </li>
           <li class="input bb-checkbox">
             <label>
-              <input type="checkbox">
+              <input type="checkbox" data-input="has-tracking">
               <span data-icon="tick">Has Data Tracking</span>
             </label>
           </li>
@@ -356,24 +365,24 @@
             <label>
               <span>Tags</span>
               <p>
-                <input type="text">
+                <input type="text" data-input="tags">
                 <button type="reset"></button>
               </p>
             </label>
           </li>
           <li class="input">
             <label>
-              <span>Categories</span>
+              <span>Category*</span>
               <p>
-                <select></select>
+                <select data-input="category"></select>
               </p>
             </label>
           </li>
           <li class="input">
             <label>
-              <span>App Slug</span>
+              <span>App Slug*</span>
               <p>
-                <input type="text">
+                <input type="text" data-input="slug">
                 <button type="reset"></button>
               </p>
             </label>
@@ -382,30 +391,20 @@
             <label>
               <span>Screenshots</span>
               <p>
-                <input type="file">
+                <input type="file" data-input="screenshots">
               </p>
             </label>
           </li>
         </ul>
-        <div data-type="webapp">
-          <h2>PWA Config</h2>
-          <ul>
-            <li class="input">
-              <label>
-                <span>App URL</span>
-                <p>
-                  <input type="text">
-                  <button type="reset"></button>
-                </p>
-              </label>
-            </li>
-          </ul>
-        </div>
       </section>
       <menu>
         <button data-action="cancel">Cancel</button>
         <button class="recommend" data-action="jsonify">Get JSON</button>
       </menu>
     </form>
+
+    <section role="status" id="submit-message" style="display: none;">
+      <p>Your app is now added to the database.</p>
+    </section>
   </body>
 </html>

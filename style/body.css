@@ -127,6 +127,8 @@ body.limited-gpu * {
   width: max-content;
   transform: translateX(-50%);
   border-radius: 1rem;
+  font-weight: normal;
+  text-transform: none;
 
   visibility: hidden;
   opacity: 0;

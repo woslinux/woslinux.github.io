@@ -1,8 +1,23 @@
 'use strict';
 
+import { getUsername, getProfilePicture, isUserLoggedIn } from '/js/firebase.js';
+
 var downloads = JSON.parse(localStorage.getItem('store_downloads')) || [];
 
 (function() {
+  var loginButton = document.getElementById('login-button');
+  var avatar = document.getElementById('profile-picture');
+  getUsername(function(data) {
+    avatar.title = data;
+  });
+  getProfilePicture(function(data) {
+    avatar.style.backgroundImage = 'url(' + data + ')';
+  });
+
+  if (isUserLoggedIn) {
+    loginButton.style.display = 'none';
+  }
+
   var rootSection = document.querySelector('[role="region"] > section');
 
   var menuButton = document.getElementById('menu-button');

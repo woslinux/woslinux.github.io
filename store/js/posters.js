@@ -25,9 +25,9 @@
     previousPoster.classList.add('current');
 
     var imageUrl = previousPoster.querySelector('img').src;
-    posters.style.setProperty('--color-primary', colorPicker(imageUrl, {colors: 2, brightness: 1.5})[0]);
+    posters.style.setProperty('--color-primary', colorPicker(imageUrl, {colors: 2, brightness: 1.75})[0]);
     posters.style.setProperty('--color-secondary', colorPicker(imageUrl, {colors: 2, brightness: 0.25})[1]);
-    posters.style.setProperty('--color-overlay', colorPicker(imageUrl, {brightness: 0.5})[0]);
+    posters.style.setProperty('--color-overlay', colorPicker(imageUrl)[0]);
 
     currentDot.classList.remove('current');
     if (currentDot.previousElementSibling) {
@@ -51,7 +51,7 @@
     var imageUrl = nextPoster.querySelector('img').src;
     posters.style.setProperty('--color-primary', colorPicker(imageUrl, {colors: 2, brightness: 1.5})[0]);
     posters.style.setProperty('--color-secondary', colorPicker(imageUrl, {colors: 2, brightness: 0.25})[1]);
-    posters.style.setProperty('--color-overlay', colorPicker(imageUrl, {brightness: 0.5})[0]);
+    posters.style.setProperty('--color-overlay', colorPicker(imageUrl)[0]);
 
     previousPoster.classList.remove('previous');
     previousPoster.classList.add('next');

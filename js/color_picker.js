@@ -15,9 +15,9 @@ function colorPicker(url, _config = {}) {
 
         // XXX: Here we multiply the color value with the brightness you
         //      specified to change it's brightness.
-        var r = p[0] * (_config.brightness || 1);
-        var g = p[1] * (_config.brightness || 1);
-        var b = p[2] * (_config.brightness || 1);
+        var r = p[0] + parseInt((255 - p[0]) * ((_config.brightness || 1) - 1));
+        var g = p[1] + parseInt((255 - p[1]) * ((_config.brightness || 1) - 1));
+        var b = p[2] + parseInt((255 - p[2]) * ((_config.brightness || 1) - 1));
 
         // XXX: And we get the color values and turn them to rgba CSS values
         //      with optional opacity.

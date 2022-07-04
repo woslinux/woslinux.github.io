@@ -2,8 +2,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
 import { getDatabase, ref, set, get, child, onValue } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
-import { Firestore, doc } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-firestore.js";
-import { ref as sRef } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-storage.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,190 +20,86 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const database = getDatabase();
-const db = new Firestore(app);
+export const database = getDatabase();
 
-window.addEventListener('load', function() {
-  var loginButton = document.getElementById('login-button');
-  var profilePicture = document.getElementById('profile-picture');
-  if (profilePicture) {
-    profilePicture.style.display = 'none';
-  }
+export var loginId = localStorage.getItem('wos_login');
+export var isUserLoggedIn = localStorage.getItem('wos_login') !== null ? true : false;
+export var userHref = '/';
 
-  if (localStorage.getItem('wos_login')) {
-    var user = {};
-
-    var userId = localStorage.getItem('wos_login');
-    if (loginButton) {
-      loginButton.style.display = 'none';
-    }
-    if (profilePicture) {
-      profilePicture.style.display = 'block';
-    }
-
-    console.log('Fetching values from servers...');
-    var username = ref(database, 'users/' + userId + '/username');
-    var profile_picture = ref(database, 'users/' + userId + '/profile_picture');
-    var description = ref(database, 'users/' + userId + '/description');
-    var phone_number = ref(database, 'users/' + userId + '/phone_number');
-    var date_created = ref(database, 'users/' + userId + '/date_created');
-
-    onValue(username, function(snapshot) {
-      const data = snapshot.val();
-      if (profilePicture) {
-        profilePicture.title = data;
-      }
-      user = Object.assign(user, { username: data });
-    });
-    onValue(profile_picture, function(snapshot) {
-      const data = snapshot.val();
-      if (profilePicture) {
-        profilePicture.style.backgroundImage = 'url(' + data + ')';
-      }
-      user = Object.assign(user, { profile_picture: data });
-    });
-    onValue(description, function(snapshot) {
-      const data = snapshot.val();
-      user = Object.assign(user, { description: data });
-    });
-    onValue(phone_number, function(snapshot) {
-      const data = snapshot.val();
-      user = Object.assign(user, { phone_number: data });
-    });
-    onValue(date_created, function(snapshot) {
-      const data = snapshot.val();
-      user = Object.assign(user, { date_created: data });
-    });
-  }
-
-  // Custom attributes.
-  var usernames = document.querySelectorAll('[data-user-name]');
-  var profilePictures = document.querySelectorAll('[data-user-avatar]');
-  var descriptions = document.querySelectorAll('[data-user-desc]');
-  var phoneNumbers = document.querySelectorAll('[data-user-tel]');
-  var dateCreated = document.querySelectorAll('[data-user-date]');
-
-  setInterval(function() {
-    usernames.forEach(function(node) {
-      if (node.nodeName == 'INPUT') {
-        node.value = user.username;
-        node.nextElementSibling.style.display = 'none';
-        node.addEventListener('keydown', function(evt) {
-          setTimeout(function() {
-            if (node.value == user.username) {
-              node.nextElementSibling.style.display = 'block';
-            } else {
-              node.nextElementSibling.style.display = 'none';
-            }
-          });
-        });
-      } else {
-        node.innerText = user.username;
-      }
-    });
-    profilePictures.forEach(function(node) {
-      switch(node.nodeName) {
-        case 'IMG':
-          node.src = user.profile_picture;
-          break;
-        default:
-          node.style.backgroundImage = 'url(' + user.profile_picture + ')';
-          break;
-      }
-      node.onclick = function() {
-        var filePicker = document.createElement('input');
-        filePicker.type = 'file';
-        filePicker.click();
-        filePicker.addEventListener('change', function() {
-          function getBase64(file) {
-            var reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = function () {
-              window.WOS_LOGIN.changeAvatar(reader.result);
-            };
-            reader.onerror = function (error) {
-              console.log('Error: ', error);
-            };
-          }
-
-          var file = filePicker.files[0];
-          getBase64(file);
-        });
-      };
-    });
-    descriptions.forEach(function(node) {
-      switch(node.nodeName) {
-        case 'INPUT':
-          node.value = user.description;
-          node.addEventListener('keydown', function(evt) {
-            switch(evt.keyCode) {
-              case 13:
-                // ...
-                break;
-            }
-          });
-          break;
-        default:
-          node.innerText = user.description;
-          break;
-      }
-    });
-    phoneNumbers.forEach(function(node) {
-      switch(node.nodeName) {
-        case 'INPUT':
-          node.value = user.phone_number;
-          node.addEventListener('keydown', function(evt) {
-            switch(evt.keyCode) {
-              case 13:
-                // ...
-                break;
-            }
-          });
-          break;
-        default:
-          node.innerText = user.phone_number;
-          break;
-      }
-    });
-    dateCreated.forEach(function(node) {
-      switch(node.nodeName) {
-        case 'INPUT':
-          node.value = user.date_created;
-          break;
-        default:
-          node.innerText = new Date(user.date_created || 0);
-          break;
-      }
-    });
-  }, 1000);
-});
-
-window.WOS_LOGIN = {};
-
-window.WOS_LOGIN.writeUserData = function(name, email, password, imageUrl) {
-  var userId = parseInt(Math.random() * 2147483647);
-  var dateCreated = Date.now();
-  set(ref(database, 'users/' + userId), {
-    username: name,
-    email: email,
-    password: password,
-    profile_picture: imageUrl,
-    preferences: {},
-    description: '',
-    phone_number: '',
-    date_created: dateCreated,
-    devices: []
+export function getUsername(callback) {
+  var username = ref(database, 'users/' + loginId + '/username');
+  onValue(username, function(snapshot) {
+    const data = snapshot.val();
+    callback(data);
   });
-  window.WOS_LOGIN.inputUserDataWithId(userId);
-  location.href = '/';
 }
 
-window.WOS_LOGIN.inputUserDataWithId = function(userId) {
+export function getProfilePicture(callback) {
+  var profile_picture = ref(database, 'users/' + loginId + '/profile_picture');
+  onValue(profile_picture, function(snapshot) {
+    const data = snapshot.val();
+    callback(data);
+  });
+}
+
+export function getModVerification(callback) {
+  var moderator = ref(database, 'users/' + loginId + '/moderator');
+  onValue(moderator, function(snapshot) {
+    const data = snapshot.val();
+    callback(data);
+  });
+}
+
+export function getAttribute(name, callback) {
+  var attribute = ref(database, 'users/' + loginId + '/' + name);
+  onValue(attribute, function(snapshot) {
+    const data = snapshot.val();
+    callback(data);
+  });
+}
+
+export function writeUserData(name, email, password, imageUrl) {
+  var userId = parseInt(Math.random() * 2147483647);
+  var dateCreated = Date.now();
+  
+  function check() {
+    var idCheck = ref(database, 'users/' + userId);
+    onValue(idCheck, function(snapshot) {
+      const data = snapshot.val();
+      var usedId = (data == userId);
+      if (usedId) {
+        userId = parseInt(Math.random() * 2147483647);
+        check();
+      } else {
+        create();
+      }
+    });
+  }
+
+  function create() {
+    set(ref(database, 'users/' + userId), {
+      username: name,
+      email: email,
+      password: password,
+      profile_picture: imageUrl || 'https://ui-avatars.com/api/?name=' + name.replaceAll(' ', '+') + '&background=random',
+      preferences: {},
+      description: '',
+      phone_number: '',
+      date_created: dateCreated,
+      devices: [],
+      is_moderator: false
+    });
+    inputUserDataWithId(userId);
+    location.href = '/';
+  }
+}
+
+export function inputUserDataWithId(userId) {
   localStorage.setItem('wos_login', userId);
   console.log('Logging in as ' + userId);
 };
 
-window.WOS_LOGIN.inputUserData = function(username, password) {
+export function inputUserData(username, password) {
   var users = ref(database, 'users');
   console.log('Fetching logins from servers...');
 
@@ -227,12 +121,67 @@ window.WOS_LOGIN.inputUserData = function(username, password) {
   });
 };
 
-window.WOS_LOGIN.changeAvatar = function(href) {
+export function changeAvatar(href) {
   set(ref(database, 'users/' + localStorage.getItem('wos_login') + '/profile_picture'), href);
 }
-window.WOS_LOGIN.changeUsername = function(text) {
+export function changeUsername(text) {
   set(ref(database, 'users/' + localStorage.getItem('wos_login') + '/username'), text);
 }
-window.WOS_LOGIN.changeAttribute = function(attr, value) {
+export function changeAttribute(attr, value) {
   set(ref(database, 'users/' + localStorage.getItem('wos_login') + '/' + attr), value);
+}
+
+// Store
+export function getStoreWebapp(name, callback) {
+  var webapp = ref(database, 'webapps/' + name);
+  onValue(webapp, function(snapshot) {
+    const data = snapshot.val();
+    callback(data[name]);
+  });
+}
+export function getStoreWebapps(callback) {
+  var webapps = ref(database, 'webapps');
+  onValue(webapps, function(snapshot) {
+    const data = snapshot.val();
+    var entries = Object.entries(data);
+    callback(entries);
+  });
+}
+
+export function getStoreCategories(callback) {
+  var categories = ref(database, 'categories');
+  onValue(categories, function(snapshot) {
+    const data = snapshot.val();
+    var entries = Object.entries(data);
+    callback(entries);
+  });
+}
+
+export function submitWebapp(manifest) {
+  var dateCreated = Date.now();
+  function create() {
+    set(ref(database, 'users/' + manifest.slug), {
+      'name': manifest.name,
+      'description': manifest.description,
+      'icon': manifest.icon,
+      'git_repo': manifest.git_repo,
+      'download': {
+        'url': manifest.download,
+        'manifest': manifest.manifest
+      },
+      'type': manifest.role,
+      'license': manifest.license,
+      'author': manifest.developer,
+      'maintainer': manifest.developer,
+      'has_ads': false,
+      'has_tracking': false,
+      'meta': {
+        'tags': manifest.tags,
+        'categories': manifest.categories
+      },
+      'slug': manifest.name.toLowerCase().replaceAll(' ', '-'),
+      'screenshots': manifest.screenshots,
+      'date_created': dateCreated
+    });
+  }
 }

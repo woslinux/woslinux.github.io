@@ -364,6 +364,7 @@ wos-scrollbar-track {
 
   [role="region"] > section {
     margin-top: -5rem;
+    padding-top: 5rem;
     height: calc(100% - 64px) !important;
   }
 
