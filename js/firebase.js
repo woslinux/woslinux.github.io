@@ -5,6 +5,15 @@ import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebase
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+/*
+ Version: v4.2.0
+ Deprecated: No longer tested, documented, or maintained.
+ Apache License 2.0: Copyright (c) 2010-2018 LiosK
+*/
+var UUID;
+UUID=function(f){function a(){}a.generate=function(){var b=a._getRandomInt,c=a._hexAligner;return c(b(32),8)+"-"+c(b(16),4)+"-"+c(16384|b(12),4)+"-"+c(32768|b(14),4)+"-"+c(b(48),12)};a._getRandomInt=function(b){if(0>b||53<b)return NaN;var c=0|1073741824*Math.random();return 30<b?c+1073741824*(0|Math.random()*(1<<b-30)):c>>>30-b};a._hexAligner=function(b,c){for(var a=b.toString(16),d=c-a.length,e="0";0<d;d>>>=1,e+=e)d&1&&(a=e+a);return a};a.overwrittenUUID=f;"object"===typeof module&&"object"===typeof module.exports&&
+(module.exports=a);return a}(UUID);
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -24,14 +33,25 @@ window.addEventListener('beforeunload', function() {
   setDBItem('users/' + loginId + '/is_online', false);
 });
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+export const database = getDatabase();
+
+export var loginId = localStorage.getItem('wos_login');
+export var isUserLoggedIn = loginId !== null ? true : false;
+export var userHref = '/';
+
 var identifier = (navigator.appCodeName + navigator.appName + navigator.deviceMemory + window.outerWidth + window.outerHeight + navigator.platform).replaceAll(' ', '').toLowerCase();
-try {
-  navigator.getBattery().then(function(battery) {
-    updateInfo(battery);
-  });
-} catch(e) {
-  updateInfo({level: 0.75});
-};
+if (isUserLoggedIn) {
+  try {
+    navigator.getBattery().then(function(battery) {
+      updateInfo(battery);
+    });
+  } catch(e) {
+    updateInfo({level: 0.75});
+  };
+}
 
 function updateInfo(battery) {
   setInterval(function() {
@@ -51,15 +71,6 @@ function updateInfo(battery) {
   }, 3000);
 }
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-export const database = getDatabase();
-
-export var loginId = localStorage.getItem('wos_login');
-export var isUserLoggedIn = loginId !== null ? true : false;
-export var userHref = '/';
-
 // User data
 export function getDBItem(path, callback) {
   var username = ref(database, path);
@@ -73,49 +84,32 @@ export function setDBItem(path, text) {
 }
 
 // Outer user calls
-export function writeUserData(name, email, password, imageUrl = undefined) {
-  var userId = parseInt(Math.random() * 2147483647);
+export function writeUserData(name, email, password) {
+  var userId = UUID.generate();
   var dateCreated = Date.now();
   
-  function check() {
-    var idCheck = ref(database, 'users/' + userId);
-    onValue(idCheck, function(snapshot) {
-      const data = snapshot.val();
-      var entries = Object.entries(data);
-      var usedId = (entries[0] == userId);
-      if (usedId) {
-        userId = parseInt(Math.random() * 2147483647);
-        check();
-      } else {
-        create();
-      }
-    });
-  }
-  check();
-
-  function create() {
-    setDBItem('users/' + userId, {
-      username: name,
-      email: email,
-      password: password,
-      profile_picture: imageUrl || 'https://ui-avatars.com/api/?name=' + name.replaceAll(' ', '+') + '&background=random',
-      preferences: {},
-      description: '',
-      phone_number: '',
-      date_created: dateCreated,
-      devices: {},
-      is_moderator: false,
-      is_verified: false,
-      notifications: {},
-      clipboard: {},
-      shopping_list: {},
-      is_developer: false,
-      is_supporter: false,
-      last_active: dateCreated
-    });
-    inputUserDataWithId(userId);
-    location.href = '/';
-  }
+  setDBItem('users/' + userId, {
+    username: name,
+    email: email,
+    password: password,
+    profile_picture: 'https://ui-avatars.com/api/?name=' + name.replaceAll(' ', '+') + '&background=random',
+    preferences: {},
+    description: '',
+    phone_number: '',
+    date_created: dateCreated,
+    devices: {},
+    is_moderator: false,
+    is_verified: false,
+    notifications: {},
+    clipboard: {},
+    shopping_list: {},
+    is_developer: false,
+    is_supporter: false,
+    last_active: dateCreated,
+    is_online: false
+  });
+  inputUserDataWithId(userId);
+  location.href = '/';
 }
 
 export function inputUserDataWithId(userId) {
@@ -426,9 +420,13 @@ export function openLoginPrompt(type = 'login', callback) {
     };
     submitButton.onclick = function(evt) {
       try {
-        writeUserData(username.value, email.value, password.value, passwordConfirm.value);
+        if (password.value == passwordConfirm.value) {
+          writeUserData(username.value, email.value, password.value);
+        } else {
+          console.error('Something went wrong whilst trying to sign up...');
+        }
       } catch(e) {
-        alert('Something went wrong whilst trying to sign up...');
+        console.error('Something went wrong whilst trying to sign up...');
       }
       close();
       callback();
