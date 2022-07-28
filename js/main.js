@@ -1,30 +1,48 @@
 'use strict';
-import { getUsername, getProfilePicture, isUserLoggedIn } from '/js/firebase.js';
 
-document.addEventListener('DOMContentLoaded', function() {
-  var loginButton = document.getElementById('login-button');
-  var avatar = document.getElementById('profile-picture');
-  getUsername(function(data) {
-    avatar.title = data;
-  });
-  getProfilePicture(function(data) {
-    avatar.style.backgroundImage = 'url(' + data + ')';
-  });
+import { loginId, getDBItem, setDBItem, isUserLoggedIn } from "./firebase.js";
 
-  if (isUserLoggedIn) {
-    loginButton.style.display = 'none';
+(function() {
+  var isDarkMode = (localStorage.getItem('dark_mode') === 'true');
+  if (isDarkMode) {
+    document.body.classList.add('dark-mode-enabled');
   }
 
-  var frame = document.getElementById('frame');
-  function parseMCWEmbed(file) {
-    file = file !== '' ? file : 'pages/index.html';
-    var client = new XMLHttpRequest();
-    client.open('GET', file);
-    client.onreadystatechange = function() {
-      frame.innerHTML = '<!-- MCW Embed: ' + file + ' -->' +
-          client.responseText.replaceAll('script ', 'script async="true" ');
-    }
-    client.send();
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      navigator.mozL10n.language.code =
+        (localStorage.getItem('language') !== undefined ?
+            localStorage.getItem('language') : (navigator.language || 'en-US'));
+      if (languageSelector) {
+        languageSelector.value =
+          (localStorage.getItem('language') !== undefined ?
+              localStorage.getItem('language') : (navigator.language || 'en-US'));
+      }
+    });
+  });
+
+  var languageSelector = document.getElementById('languages');
+  if (languageSelector) {
+    languageSelector.addEventListener('change', function() {
+      navigator.mozL10n.language.code = languageSelector.value;
+      localStorage.setItem('language', languageSelector.value);
+    });
+  }
+
+  var frame = document.getElementById('content');
+  if (frame.contentWindow && frame.contentDocument) {
+    frame.addEventListener('load', function() {
+      setInterval(function() {
+        var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (isDarkMode) {
+          frame.contentDocument.body.classList.add('dark-mode-enabled');
+        }
+
+        frame.contentWindow.navigator.mozL10n.language.code =
+          (localStorage.getItem('language') !== undefined ?
+              localStorage.getItem('language') : (navigator.language || 'en-US'));
+      }, 1000);
+    });
   }
 
   if (location.search !== '') {
@@ -34,29 +52,43 @@ document.addEventListener('DOMContentLoaded', function() {
       let pair = params_arr[i].split('=');
       if (pair[0] == 'p') {
         if (pair[1]) {
-          parseMCWEmbed('pages/' + pair[1] + '.html');
+          frame.src = 'pages/' + pair[1] + '/index.html';
+          frame.addEventListener('load', function() {
+            setInterval(function() {
+              if (frame.contentDocument) {
+                frame.style.height = frame.contentDocument.scrollingElement.scrollHeight + 'px';
+              }
+            }, 1000);
+          });
         }
       } else if (pair[0] == 'blog') {
         if (pair[1]) {
-          var iframe = document.createElement('iframe');
-          iframe.src = 'https://woslinux.github.io/blog/' + pair[1];
-          frame.appendChild(iframe);
+          frame.src = 'https://woslinux.github.io/blog/' + pair[1];
+          frame.addEventListener('load', function() {
+            setInterval(function() {
+              if (frame.contentDocument) {
+                frame.style.height = frame.contentDocument.scrollingElement.scrollHeight + 'px';
+              }
+            }, 1000);
+          });
         }
       }
     }
   } else {
-    parseMCWEmbed('pages/index.html');
-    frame.classList.remove('markdown');
+    frame.src = 'pages/index/index.html';
+    frame.addEventListener('load', function() {
+      setInterval(function() {
+        if (frame.contentDocument) {
+          frame.style.height = frame.contentDocument.scrollingElement.scrollHeight + 'px';
+        }
+      }, 1000);
+    });
   }
 
-  var links = document.querySelectorAll('a[href]');
-  links.forEach(function(node) {
-    if (node.href.startsWith('?p=')) {
-      var content = node.href.replaceAll('?p=', '');
-      node.href = '#';
-      node.onclick = function(evt) {
-        parseMCWEmbed('pages/' + content + '.html');
-      };
-    }
-  });
-});
+  window.importJS = function(url) {
+    var script = document.createElement('script');
+    script.type = 'module text/javascript';
+    script.src = url;
+    frame.appendChild(script);
+  };
+})();
