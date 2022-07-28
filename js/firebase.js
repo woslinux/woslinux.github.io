@@ -94,7 +94,7 @@ export function writeUserData(name, email, password, imageUrl = undefined) {
   check();
 
   function create() {
-    set(ref(database, 'users/' + userId), {
+    setDBItem('users/' + userId, {
       username: name,
       email: email,
       password: password,

@@ -87,7 +87,7 @@ import { loginId, getDBItem, setDBItem, isUserLoggedIn } from "./firebase.js";
 
   window.importJS = function(url) {
     var script = document.createElement('script');
-    script.type = 'module text/javascript';
+    script.type = 'module';
     script.src = url;
     frame.appendChild(script);
   };
