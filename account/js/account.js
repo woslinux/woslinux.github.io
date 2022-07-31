@@ -1,6 +1,6 @@
 'use strict';
 
-import { loginId, getDBItem, setDBItem } from "./firebase.js";
+import { loginId, getDBItem, setDBItem } from "/js/firebase.js";
 
 (function() {
   var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;

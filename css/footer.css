@@ -152,11 +152,10 @@ html[dir="rtl"] .footer ul li a {
   font-size: 1.6rem;
   padding: 0 1rem;
   box-sizing: border-box;
-  line-height: 3.8rem;
+  line-height: 4rem;
   position: relative;
   text-decoration: none;
   color: #333;
-  border: solid 0.1rem transparent;
   transition: border-color 1s ease, background 0.2s ease;
 }
 
@@ -181,6 +180,14 @@ html[dir="rtl"] .footer ul li a {
   box-sizing: border-box;
   border-radius: 0.6rem;
   border: none;
+}
+
+.footer label {
+  height: 4rem;
+  padding: 0 1.5rem;
+  line-height: 4rem;
+  color: #333;
+  font-size: 1.6rem;
 }
 
 .dark-mode-enabled .footer ul li:hover {
@@ -209,6 +216,10 @@ html[dir="rtl"] .footer ul li a {
 
 .dark-mode-enabled .footer select {
   background-color: #303030;
+  color: #fff;
+}
+
+.dark-mode-enabled .footer label {
   color: #fff;
 }
 

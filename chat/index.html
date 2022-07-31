@@ -6,19 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
 
-    <!-- Building Blocks -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/components/elements/gaia-icons/gaia-icons.css">
     <link rel="stylesheet" type="text/css" href="css/chat.css">
+    <link rel="stylesheet" type="text/css" href="css/message.css">
+    <link rel="stylesheet" type="text/css" href="css/ui.css">
+    <link rel="stylesheet" type="text/css" href="css/splashscreen.css">
+
+    <!-- Localization -->
+    <meta name="defaultLanguage" content="en-US">
+    <meta name="availableLanguages" content="af, ar, da, de, el, en-US, es, fi, fr, ga, he, hi, hu, id, ja, ko, ku, lv, nl, no, pt, zh">
+    <link rel="localization" href="locales/chat.{locale}.properties">
+    <script type="text/javascript" defer src="js/l10n.js"></script>
+
+    <!-- Javascript -->
+    <script type="module" defer src="js/chat.js"></script>
+    <script type="text/javascript" defer src="js/touch.js"></script>
   </head>
   <body>
-    <section role="region" id="sidebar">
+    <ul id="groups">
+      <button id="friends-list" data-icon="user"></button>
+      <button id="join-group" data-icon="add"></button>
+      <ul id="servers"></ul>
+    </ul>
+
+    <div id="sidebar">
       <h1 id="server-title"></h1>
       <ul id="server-list"></ul>
-    </section>
-    <section role="region" id="content">
+    </div>
+
+    <div id="content">
       <header>
-        <a href="#" class="icon icon-menu"></a>
-        <h1></h1>
+        <a href="#" data-icon="menu" id="menu-button"></a>
+        <h1 id="chat-title"></h1>
       </header>
-    </section>
+      <div id="messages"></div>
+      <footer id="chat-footer">
+        <form id="chat-footer-form">
+          <input type="text" id="text-input" data-l10n-id="textInput"></input>
+          <button data-icon="attachments" id="attachments-button"></button>
+          <button data-icon="send" id="send-button" type="submit"></button>
+        </form>
+      </footer>
+    </div>
+    
+    <div id="splash-screen">
+      <div class="sprite"></div>
+      <div class="sprite"></div>
+    </div>
   </body>
 </html>

@@ -7,6 +7,12 @@ import { loginId, getDBItem, setDBItem, isUserLoggedIn } from "./firebase.js";
   if (isDarkMode) {
     document.body.classList.add('dark-mode-enabled');
   }
+  var darkMode = document.getElementById('dark-mode');
+  darkMode.checked = isDarkMode;
+  darkMode.addEventListener('change', function() {
+    localStorage.setItem('dark_mode', darkMode.checked);
+    document.body.classList.toggle('dark-mode-enabled');
+  });
 
   window.addEventListener('load', function() {
     setTimeout(function() {

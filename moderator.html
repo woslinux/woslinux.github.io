@@ -38,6 +38,7 @@
             modlist.appendChild(user);
 
             var avatar = document.createElement('td');
+            avatar.style.backgroundColor = entry[1].is_online ? '#40a060' : '#c00040';
             var avatarImg = document.createElement('img');
             avatarImg.src = entry[1].profile_picture;
             avatarImg.width = 32;
@@ -118,8 +119,8 @@
       <th>Phone Number</th>
       <th>Verified</th>
       <th>Moderator</th>
-      <th>Supporter</th>
       <th>Developer</th>
+      <th>Supporter</th>
     </tr>
   </table>
   <table id="modlist" style="width:100%"></table>

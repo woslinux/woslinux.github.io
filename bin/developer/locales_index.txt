@@ -1,4 +1,5 @@
 account/locales/account.en-US.properties
+chat/locales/chat.en-US.properties
 devices/locales/devices.en-US.properties
 locales/website.en-US.properties
 pages/index/locales/main.en-US.properties

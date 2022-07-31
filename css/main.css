@@ -71,12 +71,17 @@ html, body {
   background: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2), 0 0.3rem 0.6rem rgba(0,0,0,0.3);
   z-index: 100;
-  transform-origin: 0 0;
 
   visibility: hidden;
   opacity: 0;
   transform: scale(0.9);
   transition: all 0.3s cubic-bezier(0.2, 0.9, 0.1, 1.0);
+}
+html[dir="rtl"] .dropdown {
+  transform-origin: 0 0;
+}
+html[dir="ltr"] .dropdown {
+  transform-origin: 100% 0;
 }
 .dark-mode-enabled .dropdown {
   background-color: #303030;
@@ -202,4 +207,8 @@ html[dir="ltr"] .dropdown > label input[type="checkbox"] {
 }
 html[dir="rtl"] .dropdown > label input[type="checkbox"] {
   right: 1rem;
+}
+
+.dark-mode-enabled .logo {
+  background-image: url(images/logo_dark.svg);
 }

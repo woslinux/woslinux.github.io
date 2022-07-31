@@ -78,6 +78,12 @@ section[role="region"]:not(#root).visible > section > * {
   animation: showList 0.3s cubic-bezier(0.0, 0.0, 0.0, 1.0);
 }
 
+section[role="region"] > section {
+  height: calc(100% - 5rem);
+  overflow: auto;
+  overflow: overlay;
+}
+
 @keyframes showList {
   from {
     transform: translateY(32px);
